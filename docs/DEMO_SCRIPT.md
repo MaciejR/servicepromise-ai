@@ -1,13 +1,17 @@
 # Demo outline — under 3 minutes
 
-Status: script prepared, video not recorded or submitted. Only show actual behavior; label all simulations.
+Status: recording script prepared; final video is not recorded or submitted. Use the actual running build and label all funds as PayPal Sandbox test funds. Enter the private operator token before recording, collapse Operator access, and never show credentials.
 
-- 0:00–0:20: A catalogue operator needs structured data from supplier text. Show the raw file and explain the narrow color/material contract.
-- 0:20–0:45: Import four example rows. Show one invalid price excluded before the quote. Explain the USD 3 service fee, distinct from source PLN prices.
-- 0:45–1:10: Confirm the promise and simulate payment. Explicitly state no money moves. Optionally run protected Azure extraction when the operator is present; do not show the token.
-- 1:10–1:45: Show two delivered products and one missing material. Expand evidence, show the repair count and why the uncertain item was not exported.
-- 1:45–2:10: Show USD 2 earned / USD 1 eligible back as a simulation. Download CSV and the evidence report. Explain that actual store import is not yet verified.
-- 2:10–2:40: Show persistence after refresh and the source repository. State the synthetic benchmark's limitations and the open customer-validation question.
-- 2:40–2:55: Explain next steps: verified PayPal Sandbox capture/refund and a real supplier workflow.
+- 0:00–0:20: Explain the catalogue task and the per-item delivery promise. State the limited scope: color/material extraction with source evidence.
+- 0:20–0:45: Load the four-row example. Choose PayPal Sandbox and Azure OpenAI. Show one invalid-price row excluded before quoting; the remaining three items cost USD 3 in test funds.
+- 0:45–1:20: Create checkout, approve a guest test-card payment and confirm capture in the application. Speed up waiting periods transparently. Use only the official PayPal Sandbox card generator and fictional buyer data, with Save info / create account turned off. No real card is needed.
+- 1:20–1:50: Inspect the actual model results. Show two delivered items and one without verifiable material after a repair attempt. Expand source quotations and error reasons.
+- 1:50–2:15: Issue the eligible USD 1 Sandbox refund. Show confirmed completion and the refund ID; pending must remain visibly pending until confirmed. Download the delivered CSV and evidence report.
+- 2:15–2:35: Refresh to show persistence, then show source and passing CI.
+- 2:35–2:55: Disclose that the synthetic feasibility benchmark did not show an AI advantage over rules. Original supplier data, human time-savings measurement and actual store import remain open checks.
 
-Before submitting as the final hackathon video, replace the simulated checkout/settlement segment with a verified Sandbox transaction and explain the actual role of AI. The current pilot alone is not a completed PayPal + AI submission.
+The separately verified cloud test used two rows (one delivered, one undelivered), captured USD 2 and confirmed a USD 1 refund. Do not splice its transaction identifiers into a recording of a different order. Record and describe the actual order shown.
+
+Official test-card generator: https://developer.paypal.com/sandbox-testing/card-testing#credit-card-generator
+
+The public application defaults to Demo. Selecting Sandbox creates a real transaction only within PayPal's test environment; it never uses live funds.
