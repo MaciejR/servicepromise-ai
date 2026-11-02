@@ -56,7 +56,9 @@ class Jobs:
         with self.engine.begin() as db:
             db.execute(text("UPDATE catalog_jobs SET status='queued' WHERE status='running'"))
 
-    def create(self, data, currency, provider='rules'):
+    def create(self, data, currency, provider='rules', payment_mode='demo'):
+        if payment_mode not in {'demo','sandbox'}:
+            raise ValueError('Only demo and Sandbox payments are supported')
         if provider not in {'rules', 'azure'}:
             raise ValueError('Unsupported extraction provider')
         quote = preflight(data, currency)
@@ -65,7 +67,7 @@ class Jobs:
         token = secrets.token_urlsafe(32)
         snapshot = {k: v for k, v in quote.items() if k != 'rows'}
         snapshot.update(rows=[r.model_dump() for r in quote['rows']], aliases=ALIASES,
-                        unit_cents=100, max_attempts=2, provider=provider, payment_mode='demo')
+                        unit_cents=100, max_attempts=2, provider=provider, payment_mode=payment_mode)
         job_id = str(uuid4())
         with self.engine.begin() as db:
             db.execute(text('INSERT INTO catalog_jobs(id,token_hash,status,snapshot,created_at) VALUES (:id,:token,:status,:snapshot,:at)'),
@@ -83,11 +85,15 @@ class Jobs:
                 'export': row['export']}
 
     def checkout(self, job_id, token):
-        self.get(job_id, token)
+        if self.get(job_id, token)['snapshot']['payment_mode']!='demo':
+            raise ValueError('Sandbox requires confirmed provider capture')
+        self.queue_paid(job_id)
+        return self.get(job_id, token)
+
+    def queue_paid(self, job_id):
         with self.engine.begin() as db:
             db.execute(text("UPDATE catalog_jobs SET status='queued', deadline=:deadline WHERE id=:id AND status='quoted'"),
                        {'id': job_id, 'deadline': time.time()+600})
-        return self.get(job_id, token)
 
     def tick(self, provider=None):
         if not self.lock.acquire(blocking=False):
@@ -153,6 +159,8 @@ class Jobs:
             for result in outcomes:
                 result.update(status='undelivered', issues=['export_failed'])
         final = settlement(outcomes)
+        if snapshot['payment_mode']=='sandbox':
+            final.update(simulation=False, payment_executed=True, payment_environment='sandbox')
         # No PayPal call. Final result and its sole simulated settlement are
         # committed atomically; completed jobs are never selected again.
         with self.engine.begin() as db:

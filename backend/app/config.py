@@ -17,6 +17,7 @@ class Settings(BaseModel):
     azure_openai_deployment: str = ""
     operator_token: str = ""
     auto_refund: bool = False
+    catalog_paypal_sandbox_enabled: bool = False
 
     def __init__(self, _env_file=".env", **values):
         file_values = dotenv_values(_env_file) if _env_file else {}

@@ -6,6 +6,7 @@ from ..db import engine
 from .core import ContractError
 from .jobs import Jobs
 from ..config import settings
+from .payments import Payments
 
 router = APIRouter(prefix='/api/catalog/jobs', tags=['Catalogue demo'])
 jobs = Jobs(engine)
@@ -15,6 +16,13 @@ class Input(BaseModel):
     csv: str = Field(min_length=1, max_length=262144)
     currency: str = Field(pattern='^(PLN|USD|EUR|GBP)$')
     provider: str = Field(default='rules', pattern='^(rules|azure)$')
+    payment_mode: str = Field(default='demo', pattern='^(demo|sandbox)$')
+
+
+def require_operator(value):
+    cfg=settings()
+    if len(cfg.operator_token)<32 or not secrets.compare_digest(value,cfg.operator_token):
+        raise HTTPException(403,'This Sandbox/model operation requires the operator token')
 
 
 def token(header):
@@ -26,14 +34,18 @@ def token(header):
 @router.post('', status_code=201)
 def create(body: Input, x_operator_token: str = Header(default='')):
     token('')
+    if body.provider == 'azure' or body.payment_mode == 'sandbox':
+        require_operator(x_operator_token)
+    if body.payment_mode == 'sandbox':
+        cfg=settings()
+        if not cfg.catalog_paypal_sandbox_enabled or not all([cfg.paypal_client_id,cfg.paypal_client_secret]):
+            raise HTTPException(503,'Catalogue Sandbox payments are not configured')
     if body.provider == 'azure':
         cfg = settings()
-        if len(cfg.operator_token) < 32 or not secrets.compare_digest(x_operator_token, cfg.operator_token):
-            raise HTTPException(403, 'Real Azure extraction requires the operator token')
         if not all([cfg.azure_openai_endpoint, cfg.azure_openai_api_key, cfg.azure_openai_deployment]):
             raise HTTPException(503, 'Azure extraction is not configured')
     try:
-        return jobs.create(body.csv.encode(), body.currency, body.provider)
+        return jobs.create(body.csv.encode(), body.currency, body.provider, body.payment_mode)
     except (ContractError, ValueError) as exc:
         raise HTTPException(422, str(exc)) from None
 
@@ -42,7 +54,7 @@ def create(body: Input, x_operator_token: str = Header(default='')):
 def read(job_id: str, authorization: str = Header(default='')):
     try:
         result = jobs.get(job_id, token(authorization))
-        return {k: v for k, v in result.items() if k != 'export'}
+        return Payments(jobs).view({k: v for k, v in result.items() if k != 'export'})
     except KeyError:
         raise HTTPException(404, 'Job not found') from None
 
@@ -50,9 +62,36 @@ def read(job_id: str, authorization: str = Header(default='')):
 @router.post('/{job_id}/checkout')
 def checkout(job_id: str, authorization: str = Header(default='')):
     try:
-        return jobs.checkout(job_id, token(authorization))
+        access=token(authorization)
+        job=jobs.get(job_id,access)
+        return Payments(jobs).checkout(job_id,access) if job['snapshot']['payment_mode']=='sandbox' else jobs.checkout(job_id,access)
     except KeyError:
         raise HTTPException(404, 'Job not found') from None
+
+
+@router.post('/{job_id}/capture')
+def capture(job_id: str, authorization: str = Header(default='')):
+    try:
+        return Payments(jobs).capture(job_id,token(authorization))
+    except KeyError:
+        raise HTTPException(404,'Job not found') from None
+
+
+@router.post('/{job_id}/refund')
+def refund(job_id: str, authorization: str = Header(default=''), x_operator_token: str = Header(default='')):
+    require_operator(x_operator_token)
+    try:
+        return Payments(jobs).refund(job_id,token(authorization))
+    except KeyError:
+        raise HTTPException(404,'Job not found') from None
+
+
+@router.post('/{job_id}/payment-status')
+def payment_status(job_id: str, authorization: str = Header(default='')):
+    try:
+        return Payments(jobs).reconcile(job_id,token(authorization))
+    except KeyError:
+        raise HTTPException(404,'Job not found') from None
 
 
 @router.get('/{job_id}/products.csv')
@@ -79,6 +118,7 @@ def start_worker():
     if engine.dialect.name != 'sqlite':
         return stop, None
     jobs.migrate()
+    Payments(jobs).migrate()
     jobs.recover()
     def work():
         while not stop.is_set():

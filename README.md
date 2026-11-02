@@ -6,14 +6,14 @@ Prepare a small supplier catalogue, inspect the source evidence and account for 
 
 **Source:** https://github.com/MaciejR/servicepromise-ai
 
-The catalogue workflow supports a context-aware rules baseline and operator-protected Azure OpenAI. Payments and per-item refund calculations in this workflow are **simulated**. PayPal Sandbox has not been connected to catalogue jobs. This is a feasibility MVP, not a production payment platform or a completed hackathon submission.
+The catalogue workflow supports a context-aware rules baseline and operator-protected Azure OpenAI. The public default uses **simulated payments**. Operator-protected catalogue jobs can also use **PayPal Sandbox** checkout, capture and policy refunds. Sandbox uses test funds only; live payments are unsupported. This is a feasibility MVP, not a production payment platform or a completed hackathon submission.
 
 ## Try the hosted pilot
 
 1. Use the included example or upload/paste a UTF-8 CSV (up to 20 products, 256 KiB).
 2. Select the product currency and the rules baseline. Azure requires the private operator token and incurs model usage; the token stays in UI memory.
-3. Check the quote. Invalid rows are excluded before the simulated payment.
-4. Select **Simulate payment & process**.
+3. Check the quote. Invalid rows are excluded before payment. Keep Demo selected for a no-account walkthrough; Sandbox requires operator access.
+4. Select **Simulate payment & process**, or create Sandbox checkout, approve its test payment and then confirm capture in the app.
 5. Inspect the product outcomes and expand an item to see source evidence and validation errors.
 6. Download accepted products as draft CSV and the JSON evidence report.
 
@@ -56,7 +56,7 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:5173. Vite proxies `/api` to port 8000. Keep `PAYMENT_MODE=demo` for catalogue jobs. Configure Azure OpenAI and a random operator token of at least 32 characters on the backend to enable protected real-model extraction. Never put secrets in a `VITE_` variable or commit `.env`.
+Open http://localhost:5173. Vite proxies `/api` to port 8000. Keep `PAYMENT_MODE=demo` for the legacy application. Catalogue payment mode is frozen per job. Set `CATALOG_PAYPAL_SANDBOX_ENABLED=true` and configure Sandbox client ID/secret to enable operator-protected test payments. Configure Azure OpenAI and a random operator token of at least 32 characters on the backend to enable protected real-model extraction. Never put secrets in a `VITE_` variable or commit `.env`.
 
 ## Durable processing and deployment
 
@@ -75,9 +75,9 @@ cd ../frontend
 npm run build
 ```
 
-Current local suite: **52 tests passed**, including capability isolation, proportional and full simulated refunds, recovery after interrupted processing, concurrent worker requests, migration backup, source evidence, API downloads and operator gating. TypeScript and Vite production build pass. The catalogue UI has been exercised in Chrome with the example data.
+Current local suite: **59 tests passed**, including capability isolation, proportional and full simulated refunds, recovery after interrupted processing, concurrent worker requests, migration backup, source evidence, API downloads and operator gating. TypeScript and Vite production build pass. The catalogue UI has been exercised in Chrome with the example data.
 
-Remaining external checks: original supplier files reviewed by a human, measured end-user time savings, actual store import, PayPal login/credentials and real Sandbox capture/refund verification. Do not present mocked tests or simulated settlements as completed payment integration.
+Remaining external checks: original supplier files reviewed by a human, measured end-user time savings, actual store import, a complete verified Sandbox capture/refund flow (see the latest Sandbox verification record). Do not present mocked tests or simulated settlements as completed payment integration.
 
 ## Project records
 
@@ -92,3 +92,7 @@ An earlier marketing-brief experiment remains accessible at `/?legacy=1`; its pa
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+## Sandbox payment safety
+
+Only `api-m.sandbox.paypal.com` is used. Delivery starts after PayPal confirms the exact USD capture. Create/capture/refund operations use stable per-job IDs and persist their intent before a network call. A capture retry first checks the PayPal order. Pending refunds remain pending until confirmed by a status read. Uncertain operations older than one hour require manual reconciliation rather than issuing a new transaction. A single process serializes financial operations; multi-instance deployment is unsupported. These controls do not make this a production payment platform.

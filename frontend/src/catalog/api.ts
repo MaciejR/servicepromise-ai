@@ -1,7 +1,7 @@
 export type Evidence={value:string;term:string;quote:string};
 export type Item={source_id:string;sku:string;name:string;price:string;currency:string;supplier_text:string};
 export type Result={source_id:string;status:string;issues:string[];extraction:{color?:Evidence|null;material?:Evidence|null};attempts:{issues:string[]}[]};
-export type Job={id:string;status:string;snapshot:{contract:string;provider:string;payment_mode:string;quoted_cents:number;product_currency:string;rows:Item[];excluded:{line:number;source_id:string;issues:string[]}[]};results:Result[];settlement:null|{accepted_count:number;undelivered_count:number;refund_eligible_cents:number;retained_cents:number;payment_executed:boolean}};
+export type Job={payment?:null|{state:string;approval_url:string|null;order_id:string|null;capture_id:string|null;refund_id:string|null};id:string;status:string;snapshot:{contract:string;provider:string;payment_mode:string;quoted_cents:number;product_currency:string;rows:Item[];excluded:{line:number;source_id:string;issues:string[]}[]};results:Result[];settlement:null|{accepted_count:number;undelivered_count:number;refund_eligible_cents:number;retained_cents:number;payment_executed:boolean}};
 export type Session={id:string;token:string};
 const base=(import.meta.env.VITE_API_BASE_URL||'').replace(/\/$/,'');
 export const money=(cents:number)=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(cents/100);

@@ -6,13 +6,13 @@ from .config import settings
 BASE_URL = "https://api-m.sandbox.paypal.com"
 
 
-def call(path, payload, request_id):
+def call(path, payload, request_id, method='POST'):
     cfg = settings()
     try:
         with httpx.Client(timeout=30) as client:
             auth = client.post(f"{BASE_URL}/v1/oauth2/token", auth=(cfg.paypal_client_id, cfg.paypal_client_secret), data={"grant_type": "client_credentials"})
             auth.raise_for_status()
-            response = client.post(f"{BASE_URL}{path}", json=payload, headers={
+            response = client.request(method, f"{BASE_URL}{path}", **({'json':payload} if method != 'GET' else {}), headers={
                 "Authorization": f"Bearer {auth.json()['access_token']}",
                 "PayPal-Request-Id": request_id,
                 "Prefer": "return=representation",
