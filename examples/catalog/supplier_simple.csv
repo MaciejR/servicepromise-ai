@@ -1,0 +1,21 @@
+source_id,sku,name,price,currency,supplier_text
+simple-01,00-simple-01,Poszewka simple-01,20.90,PLN,Kolor: niebieski. Materiał: bawełna.
+simple-02,00-simple-02,Poszewka simple-02,21.90,PLN,Kolor: czerwony. Materiał: len.
+simple-03,00-simple-03,Poszewka simple-03,22.90,PLN,Kolor: zielony. Materiał: poliester.
+simple-04,00-simple-04,Poszewka simple-04,23.90,PLN,Kolor: biały. Materiał: wełna.
+simple-05,00-simple-05,Poszewka simple-05,24.90,PLN,Kolor: beżowy. Materiał: bawełna.
+simple-06,00-simple-06,Poszewka simple-06,25.90,PLN,Kolor: szary. Materiał: len.
+simple-07,00-simple-07,Poszewka simple-07,26.90,PLN,Kolor: czarny. Materiał: poliester.
+simple-08,00-simple-08,Poszewka simple-08,27.90,PLN,Kolor: niebieski. Materiał: wełna.
+simple-09,00-simple-09,Poszewka simple-09,28.90,PLN,Kolor: czerwony. Materiał: bawełna.
+simple-10,00-simple-10,Poszewka simple-10,29.90,PLN,Kolor: zielony. Materiał: len.
+simple-11,00-simple-11,Poszewka simple-11,30.90,PLN,Kolor: biały. Materiał: poliester.
+simple-12,00-simple-12,Poszewka simple-12,31.90,PLN,Kolor: beżowy. Materiał: wełna.
+simple-13,00-simple-13,Poszewka simple-13,32.90,PLN,Kolor: szary. Materiał: bawełna.
+simple-14,00-simple-14,Poszewka simple-14,33.90,PLN,Kolor: czarny. Materiał: len.
+simple-15,00-simple-15,Poszewka simple-15,34.90,PLN,Kolor: niebieski. Materiał: poliester.
+simple-16,00-simple-16,Poszewka simple-16,35.90,PLN,Kolor: czerwony. Materiał: wełna.
+simple-17,00-simple-17,Poszewka simple-17,36.90,PLN,Kolor: zielony. Materiał: bawełna.
+simple-18,00-simple-18,Poszewka simple-18,37.90,PLN,Kolor: biały. Materiał: len.
+simple-19,00-simple-19,Poszewka simple-19,38.90,PLN,Kolor: beżowy. Materiał: poliester.
+simple-20,00-simple-20,Poszewka simple-20,39.90,PLN,Kolor: szary. Materiał: wełna.

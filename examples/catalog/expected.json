@@ -1,0 +1,722 @@
+[
+  {
+    "source_id": "simple-01",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "blue",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "simple-02",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "red",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "simple-03",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "green",
+      "material": "polyester"
+    }
+  },
+  {
+    "source_id": "simple-04",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "white",
+      "material": "wool"
+    }
+  },
+  {
+    "source_id": "simple-05",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "beige",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "simple-06",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "grey",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "simple-07",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "black",
+      "material": "polyester"
+    }
+  },
+  {
+    "source_id": "simple-08",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "blue",
+      "material": "wool"
+    }
+  },
+  {
+    "source_id": "simple-09",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "red",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "simple-10",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "green",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "simple-11",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "white",
+      "material": "polyester"
+    }
+  },
+  {
+    "source_id": "simple-12",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "beige",
+      "material": "wool"
+    }
+  },
+  {
+    "source_id": "simple-13",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "grey",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "simple-14",
+    "group": "simple",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "black",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "simple-15",
+    "group": "simple",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "blue",
+      "material": "polyester"
+    }
+  },
+  {
+    "source_id": "simple-16",
+    "group": "simple",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "red",
+      "material": "wool"
+    }
+  },
+  {
+    "source_id": "simple-17",
+    "group": "simple",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "green",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "simple-18",
+    "group": "simple",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "white",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "simple-19",
+    "group": "simple",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "beige",
+      "material": "polyester"
+    }
+  },
+  {
+    "source_id": "simple-20",
+    "group": "simple",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "grey",
+      "material": "wool"
+    }
+  },
+  {
+    "source_id": "messy-01",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "blue",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "messy-02",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "red",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "messy-03",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "green",
+      "material": "polyester"
+    }
+  },
+  {
+    "source_id": "messy-04",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "white",
+      "material": "wool"
+    }
+  },
+  {
+    "source_id": "messy-05",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "beige",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "messy-06",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "grey",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "messy-07",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "black",
+      "material": "polyester"
+    }
+  },
+  {
+    "source_id": "messy-08",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "blue",
+      "material": "wool"
+    }
+  },
+  {
+    "source_id": "messy-09",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "red",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "messy-10",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "green",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "messy-11",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "white",
+      "material": "polyester"
+    }
+  },
+  {
+    "source_id": "messy-12",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "beige",
+      "material": "wool"
+    }
+  },
+  {
+    "source_id": "messy-13",
+    "group": "messy",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "grey",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "messy-14",
+    "group": "messy",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "black",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "messy-15",
+    "group": "messy",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "blue",
+      "material": "polyester"
+    }
+  },
+  {
+    "source_id": "messy-16",
+    "group": "messy",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "red",
+      "material": "wool"
+    }
+  },
+  {
+    "source_id": "messy-17",
+    "group": "messy",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "green",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "messy-18",
+    "group": "messy",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "white",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "messy-19",
+    "group": "messy",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "beige",
+      "material": "polyester"
+    }
+  },
+  {
+    "source_id": "messy-20",
+    "group": "messy",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "grey",
+      "material": "wool"
+    }
+  },
+  {
+    "source_id": "edge-01",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "undelivered",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-02",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "undelivered",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-03",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "undelivered",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-04",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "undelivered",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-05",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "undelivered",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-06",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "undelivered",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-07",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "undelivered",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-08",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "undelivered",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-09",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "undelivered",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-10",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "undelivered",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-11",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "blue",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "edge-12",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "green",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "edge-13",
+    "group": "edge",
+    "split": "development",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "red",
+      "material": "cotton"
+    }
+  },
+  {
+    "source_id": "edge-14",
+    "group": "edge",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "accepted",
+      "color": "beige",
+      "material": "linen"
+    }
+  },
+  {
+    "source_id": "edge-15",
+    "group": "edge",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "excluded",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-16",
+    "group": "edge",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "excluded",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-17",
+    "group": "edge",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "excluded",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-18",
+    "group": "edge",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "excluded",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-19",
+    "group": "edge",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "excluded",
+      "color": null,
+      "material": null
+    }
+  },
+  {
+    "source_id": "edge-20",
+    "group": "edge",
+    "split": "holdout",
+    "provenance": "synthetic",
+    "label_review": "assistant-authored; human review pending",
+    "expected": {
+      "status": "excluded",
+      "color": null,
+      "material": null
+    }
+  }
+]

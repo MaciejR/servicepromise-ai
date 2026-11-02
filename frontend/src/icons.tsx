@@ -1,0 +1,16 @@
+import type { CSSProperties } from 'react';
+type Props = {size?:number;className?:string;style?:CSSProperties};
+const icon=(path:string)=>(props:Props)=><svg width={props.size??20} height={props.size??20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={props.className} style={props.style} aria-hidden="true"><path d={path}/></svg>;
+export const ArrowRight=icon('M4 12h16m-6-6 6 6-6 6');
+export const Check=icon('m5 12 4 4L19 6');
+export const ChevronRight=icon('m9 6 6 6-6 6');
+export const CheckCircle2=icon('M21 11a9 9 0 1 1-5-7m-9 8 4 4L22 5');
+export const CircleDollarSign=icon('M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M12 6v12m3-10c-6-3-8 4-3 4s4 7-3 4');
+export const Clock3=icon('M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M12 6v6h5');
+export const ExternalLink=icon('M14 3h7v7m-1-6L10 14m0-11H3v18h18v-7');
+export const FileText=icon('M14 2H4v20h16V8Zm0 0v6h6M8 12h8m-8 4h8');
+export const LoaderCircle=icon('M21 12a9 9 0 1 1-9-9');
+export const RotateCcw=icon('M3 10a9 9 0 1 1 1 9M3 3v7h7');
+export const ShieldCheck=icon('M12 2 3 6v6c0 5 6 9 9 10 3-1 9-5 9-10V6Zm-5 9 3 3 7-7');
+export const Sparkles=icon('m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5ZM21 1v5m-2.5-2.5h5');
+export const TriangleAlert=icon('M12 3 1 21h22ZM12 9v5m0 3h.01');

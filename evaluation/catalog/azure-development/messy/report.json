@@ -1,0 +1,628 @@
+{
+  "contract": "catalog-textiles-v1",
+  "provider": "azure",
+  "limitations": [
+    "Local feasibility prototype; no payment is executed.",
+    "Acceptance checks a limited source grammar, not physical product truth.",
+    "Shopify import has not been tested in a store.",
+    "No human time-saving or willingness-to-pay study completed."
+  ],
+  "quote": {
+    "excluded": [],
+    "source_sha256": "b520eae74494b15131a9a26b231e0547123d3228d2ea6d1d5f8039e3507c2f41",
+    "quoted_cents": 1300,
+    "service_currency": "USD",
+    "contract": "catalog-textiles-v1",
+    "product_currency": "PLN"
+  },
+  "source_rows": [
+    {
+      "source_id": "messy-01",
+      "sku": "00-messy-01",
+      "name": "Poszewka messy-01",
+      "price": "20.90",
+      "currency": "PLN",
+      "supplier_text": "Packaging is red and linen. Product color: blue. Product material: cotton. Wash at 30 C."
+    },
+    {
+      "source_id": "messy-02",
+      "sku": "00-messy-02",
+      "name": "Poszewka messy-02",
+      "price": "21.90",
+      "currency": "PLN",
+      "supplier_text": "Materiał: len. SKU opakowania: X1; kolor: czerwony. Kod serii 2026."
+    },
+    {
+      "source_id": "messy-03",
+      "sku": "00-messy-03",
+      "name": "Poszewka messy-03",
+      "price": "22.90",
+      "currency": "PLN",
+      "supplier_text": "Product color = green; shipped with a white label. Composition = polyester. Dimensions 40 x 40 cm."
+    },
+    {
+      "source_id": "messy-04",
+      "sku": "00-messy-04",
+      "name": "Poszewka messy-04",
+      "price": "23.90",
+      "currency": "PLN",
+      "supplier_text": "Kolor: biały.\nRekomendowana dekoracja: beige.\nSkład: wełna."
+    },
+    {
+      "source_id": "messy-05",
+      "sku": "00-messy-05",
+      "name": "Poszewka messy-05",
+      "price": "24.90",
+      "currency": "PLN",
+      "supplier_text": "Material: cotton. Color: beige. Supplier note: another model is grey linen."
+    },
+    {
+      "source_id": "messy-06",
+      "sku": "00-messy-06",
+      "name": "Poszewka messy-06",
+      "price": "25.90",
+      "currency": "PLN",
+      "supplier_text": "Packaging is black and polyester. Product color: grey. Product material: linen. Wash at 30 C."
+    },
+    {
+      "source_id": "messy-07",
+      "sku": "00-messy-07",
+      "name": "Poszewka messy-07",
+      "price": "26.90",
+      "currency": "PLN",
+      "supplier_text": "Materiał: poliester. SKU opakowania: X6; kolor: czarny. Kod serii 2026."
+    },
+    {
+      "source_id": "messy-08",
+      "sku": "00-messy-08",
+      "name": "Poszewka messy-08",
+      "price": "27.90",
+      "currency": "PLN",
+      "supplier_text": "Product color = blue; shipped with a red label. Composition = wool. Dimensions 40 x 40 cm."
+    },
+    {
+      "source_id": "messy-09",
+      "sku": "00-messy-09",
+      "name": "Poszewka messy-09",
+      "price": "28.90",
+      "currency": "PLN",
+      "supplier_text": "Kolor: czerwony.\nRekomendowana dekoracja: green.\nSkład: bawełna."
+    },
+    {
+      "source_id": "messy-10",
+      "sku": "00-messy-10",
+      "name": "Poszewka messy-10",
+      "price": "29.90",
+      "currency": "PLN",
+      "supplier_text": "Material: linen. Color: green. Supplier note: another model is white polyester."
+    },
+    {
+      "source_id": "messy-11",
+      "sku": "00-messy-11",
+      "name": "Poszewka messy-11",
+      "price": "30.90",
+      "currency": "PLN",
+      "supplier_text": "Packaging is beige and wool. Product color: white. Product material: polyester. Wash at 30 C."
+    },
+    {
+      "source_id": "messy-12",
+      "sku": "00-messy-12",
+      "name": "Poszewka messy-12",
+      "price": "31.90",
+      "currency": "PLN",
+      "supplier_text": "Materiał: wełna. SKU opakowania: X11; kolor: beżowy. Kod serii 2026."
+    },
+    {
+      "source_id": "messy-13",
+      "sku": "00-messy-13",
+      "name": "Poszewka messy-13",
+      "price": "32.90",
+      "currency": "PLN",
+      "supplier_text": "Product color = grey; shipped with a black label. Composition = cotton. Dimensions 40 x 40 cm."
+    }
+  ],
+  "results": [
+    {
+      "source_id": "messy-01",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-01",
+        "color": {
+          "value": "blue",
+          "term": "blue",
+          "quote": "Product color: blue"
+        },
+        "material": {
+          "value": "cotton",
+          "term": "cotton",
+          "quote": "Product material: cotton"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-01",
+            "color": {
+              "value": "blue",
+              "term": "blue",
+              "quote": "Product color: blue"
+            },
+            "material": {
+              "value": "cotton",
+              "term": "cotton",
+              "quote": "Product material: cotton"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-02",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-02",
+        "color": {
+          "value": "red",
+          "term": "czerwony",
+          "quote": "kolor: czerwony"
+        },
+        "material": {
+          "value": "linen",
+          "term": "len",
+          "quote": "Materiał: len"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-02",
+            "color": {
+              "value": "red",
+              "term": "czerwony",
+              "quote": "kolor: czerwony"
+            },
+            "material": {
+              "value": "linen",
+              "term": "len",
+              "quote": "Materiał: len"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-03",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-03",
+        "color": {
+          "value": "green",
+          "term": "green",
+          "quote": "Product color = green"
+        },
+        "material": {
+          "value": "polyester",
+          "term": "polyester",
+          "quote": "Composition = polyester"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-03",
+            "color": {
+              "value": "green",
+              "term": "green",
+              "quote": "Product color = green"
+            },
+            "material": {
+              "value": "polyester",
+              "term": "polyester",
+              "quote": "Composition = polyester"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-04",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-04",
+        "color": {
+          "value": "white",
+          "term": "biały",
+          "quote": "Kolor: biały"
+        },
+        "material": {
+          "value": "wool",
+          "term": "wełna",
+          "quote": "Skład: wełna"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-04",
+            "color": {
+              "value": "white",
+              "term": "biały",
+              "quote": "Kolor: biały"
+            },
+            "material": {
+              "value": "wool",
+              "term": "wełna",
+              "quote": "Skład: wełna"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-05",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-05",
+        "color": {
+          "value": "beige",
+          "term": "beige",
+          "quote": "Color: beige"
+        },
+        "material": {
+          "value": "cotton",
+          "term": "cotton",
+          "quote": "Material: cotton"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-05",
+            "color": {
+              "value": "beige",
+              "term": "beige",
+              "quote": "Color: beige"
+            },
+            "material": {
+              "value": "cotton",
+              "term": "cotton",
+              "quote": "Material: cotton"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-06",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-06",
+        "color": {
+          "value": "grey",
+          "term": "grey",
+          "quote": "Product color: grey"
+        },
+        "material": {
+          "value": "linen",
+          "term": "linen",
+          "quote": "Product material: linen"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-06",
+            "color": {
+              "value": "grey",
+              "term": "grey",
+              "quote": "Product color: grey"
+            },
+            "material": {
+              "value": "linen",
+              "term": "linen",
+              "quote": "Product material: linen"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-07",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-07",
+        "color": {
+          "value": "black",
+          "term": "czarny",
+          "quote": "kolor: czarny"
+        },
+        "material": {
+          "value": "polyester",
+          "term": "poliester",
+          "quote": "Materiał: poliester"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-07",
+            "color": {
+              "value": "black",
+              "term": "czarny",
+              "quote": "kolor: czarny"
+            },
+            "material": {
+              "value": "polyester",
+              "term": "poliester",
+              "quote": "Materiał: poliester"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-08",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-08",
+        "color": {
+          "value": "blue",
+          "term": "blue",
+          "quote": "Product color = blue"
+        },
+        "material": {
+          "value": "wool",
+          "term": "wool",
+          "quote": "Composition = wool"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-08",
+            "color": {
+              "value": "blue",
+              "term": "blue",
+              "quote": "Product color = blue"
+            },
+            "material": {
+              "value": "wool",
+              "term": "wool",
+              "quote": "Composition = wool"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-09",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-09",
+        "color": {
+          "value": "red",
+          "term": "czerwony",
+          "quote": "Kolor: czerwony"
+        },
+        "material": {
+          "value": "cotton",
+          "term": "bawełna",
+          "quote": "Skład: bawełna"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-09",
+            "color": {
+              "value": "red",
+              "term": "czerwony",
+              "quote": "Kolor: czerwony"
+            },
+            "material": {
+              "value": "cotton",
+              "term": "bawełna",
+              "quote": "Skład: bawełna"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-10",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-10",
+        "color": {
+          "value": "green",
+          "term": "green",
+          "quote": "Color: green"
+        },
+        "material": {
+          "value": "linen",
+          "term": "linen",
+          "quote": "Material: linen"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-10",
+            "color": {
+              "value": "green",
+              "term": "green",
+              "quote": "Color: green"
+            },
+            "material": {
+              "value": "linen",
+              "term": "linen",
+              "quote": "Material: linen"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-11",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-11",
+        "color": {
+          "value": "white",
+          "term": "white",
+          "quote": "Product color: white"
+        },
+        "material": {
+          "value": "polyester",
+          "term": "polyester",
+          "quote": "Product material: polyester"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-11",
+            "color": {
+              "value": "white",
+              "term": "white",
+              "quote": "Product color: white"
+            },
+            "material": {
+              "value": "polyester",
+              "term": "polyester",
+              "quote": "Product material: polyester"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-12",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-12",
+        "color": {
+          "value": "beige",
+          "term": "beżowy",
+          "quote": "kolor: beżowy"
+        },
+        "material": {
+          "value": "wool",
+          "term": "wełna",
+          "quote": "Materiał: wełna"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-12",
+            "color": {
+              "value": "beige",
+              "term": "beżowy",
+              "quote": "kolor: beżowy"
+            },
+            "material": {
+              "value": "wool",
+              "term": "wełna",
+              "quote": "Materiał: wełna"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "messy-13",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "messy-13",
+        "color": {
+          "value": "grey",
+          "term": "grey",
+          "quote": "Product color = grey"
+        },
+        "material": {
+          "value": "cotton",
+          "term": "cotton",
+          "quote": "Composition = cotton"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "messy-13",
+            "color": {
+              "value": "grey",
+              "term": "grey",
+              "quote": "Product color = grey"
+            },
+            "material": {
+              "value": "cotton",
+              "term": "cotton",
+              "quote": "Composition = cotton"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "settlement": {
+    "simulation": true,
+    "currency": "USD",
+    "unit_cents": 100,
+    "quoted_cents": 1300,
+    "accepted_count": 13,
+    "undelivered_count": 0,
+    "refund_eligible_cents": 0,
+    "retained_cents": 1300,
+    "payment_executed": false
+  },
+  "provider_metrics": {
+    "requests": 3,
+    "prompt_tokens": 2156,
+    "completion_tokens": 629,
+    "latency_seconds": 23.487000000000002,
+    "throttle_retries": 0
+  },
+  "elapsed_seconds": 23.501,
+  "prompt_version": "textiles-extract-v1",
+  "export_sha256": "28041cccf301691cf886e9e3a985f9a8063a1c8b7c69a2184e248a550d3b9329"
+}

@@ -1,0 +1,1026 @@
+{
+  "provider": "rules",
+  "split": "all",
+  "case_count": 60,
+  "correct_decisions": 60,
+  "false_acceptances": 0,
+  "false_rejections": 0,
+  "complete_cases": 44,
+  "complete_correctly_accepted": 44,
+  "metrics": {
+    "requests": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "latency_seconds": 0.0
+  },
+  "decisions": [
+    {
+      "source_id": "simple-01",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "blue",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "blue",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-02",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "red",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "red",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-03",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "green",
+        "material": "polyester"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "green",
+        "material": "polyester"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-04",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "white",
+        "material": "wool"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "white",
+        "material": "wool"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-05",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "beige",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "beige",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-06",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "grey",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "grey",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-07",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "black",
+        "material": "polyester"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "black",
+        "material": "polyester"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-08",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "blue",
+        "material": "wool"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "blue",
+        "material": "wool"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-09",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "red",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "red",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-10",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "green",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "green",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-11",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "white",
+        "material": "polyester"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "white",
+        "material": "polyester"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-12",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "beige",
+        "material": "wool"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "beige",
+        "material": "wool"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-13",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "grey",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "grey",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-14",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "black",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "black",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-15",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "blue",
+        "material": "polyester"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "blue",
+        "material": "polyester"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-16",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "red",
+        "material": "wool"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "red",
+        "material": "wool"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-17",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "green",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "green",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-18",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "white",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "white",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-19",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "beige",
+        "material": "polyester"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "beige",
+        "material": "polyester"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "simple-20",
+      "group": "simple",
+      "expected": {
+        "status": "accepted",
+        "color": "grey",
+        "material": "wool"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "grey",
+        "material": "wool"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-01",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "blue",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "blue",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-02",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "red",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "red",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-03",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "green",
+        "material": "polyester"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "green",
+        "material": "polyester"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-04",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "white",
+        "material": "wool"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "white",
+        "material": "wool"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-05",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "beige",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "beige",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-06",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "grey",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "grey",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-07",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "black",
+        "material": "polyester"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "black",
+        "material": "polyester"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-08",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "blue",
+        "material": "wool"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "blue",
+        "material": "wool"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-09",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "red",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "red",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-10",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "green",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "green",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-11",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "white",
+        "material": "polyester"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "white",
+        "material": "polyester"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-12",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "beige",
+        "material": "wool"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "beige",
+        "material": "wool"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-13",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "grey",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "grey",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-14",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "black",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "black",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-15",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "blue",
+        "material": "polyester"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "blue",
+        "material": "polyester"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-16",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "red",
+        "material": "wool"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "red",
+        "material": "wool"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-17",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "green",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "green",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-18",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "white",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "white",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-19",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "beige",
+        "material": "polyester"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "beige",
+        "material": "polyester"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "messy-20",
+      "group": "messy",
+      "expected": {
+        "status": "accepted",
+        "color": "grey",
+        "material": "wool"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "grey",
+        "material": "wool"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "edge-01",
+      "group": "edge",
+      "expected": {
+        "status": "undelivered",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "undelivered",
+      "values": {
+        "color": "blue",
+        "material": null
+      },
+      "correct": true,
+      "issues": [
+        "material_ambiguous",
+        "material_missing_evidence"
+      ]
+    },
+    {
+      "source_id": "edge-02",
+      "group": "edge",
+      "expected": {
+        "status": "undelivered",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "undelivered",
+      "values": {
+        "color": null,
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": [
+        "color_ambiguous",
+        "color_missing_evidence"
+      ]
+    },
+    {
+      "source_id": "edge-03",
+      "group": "edge",
+      "expected": {
+        "status": "undelivered",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "undelivered",
+      "values": {
+        "color": null,
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": [
+        "color_missing_evidence",
+        "color_unsupported_or_missing"
+      ]
+    },
+    {
+      "source_id": "edge-04",
+      "group": "edge",
+      "expected": {
+        "status": "undelivered",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "undelivered",
+      "values": {
+        "color": "blue",
+        "material": null
+      },
+      "correct": true,
+      "issues": [
+        "material_missing_evidence",
+        "material_unsupported_or_missing"
+      ]
+    },
+    {
+      "source_id": "edge-05",
+      "group": "edge",
+      "expected": {
+        "status": "undelivered",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "undelivered",
+      "values": {
+        "color": null,
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": [
+        "color_ambiguous",
+        "color_missing_evidence"
+      ]
+    },
+    {
+      "source_id": "edge-06",
+      "group": "edge",
+      "expected": {
+        "status": "undelivered",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "undelivered",
+      "values": {
+        "color": null,
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": [
+        "color_missing_evidence",
+        "color_unsupported_or_missing"
+      ]
+    },
+    {
+      "source_id": "edge-07",
+      "group": "edge",
+      "expected": {
+        "status": "undelivered",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "undelivered",
+      "values": {
+        "color": "white",
+        "material": null
+      },
+      "correct": true,
+      "issues": [
+        "material_missing_evidence",
+        "material_unsupported_or_missing"
+      ]
+    },
+    {
+      "source_id": "edge-08",
+      "group": "edge",
+      "expected": {
+        "status": "undelivered",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "undelivered",
+      "values": {
+        "color": "blue",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": [
+        "color_negated_or_unsupported_context",
+        "material_negated_or_unsupported_context"
+      ]
+    },
+    {
+      "source_id": "edge-09",
+      "group": "edge",
+      "expected": {
+        "status": "undelivered",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "undelivered",
+      "values": {
+        "color": "blue",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": [
+        "color_negated_or_unsupported_context",
+        "material_negated_or_unsupported_context"
+      ]
+    },
+    {
+      "source_id": "edge-10",
+      "group": "edge",
+      "expected": {
+        "status": "undelivered",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "undelivered",
+      "values": {
+        "color": "grey",
+        "material": null
+      },
+      "correct": true,
+      "issues": [
+        "material_ambiguous",
+        "material_missing_evidence"
+      ]
+    },
+    {
+      "source_id": "edge-11",
+      "group": "edge",
+      "expected": {
+        "status": "accepted",
+        "color": "blue",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "blue",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "edge-12",
+      "group": "edge",
+      "expected": {
+        "status": "accepted",
+        "color": "green",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "green",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "edge-13",
+      "group": "edge",
+      "expected": {
+        "status": "accepted",
+        "color": "red",
+        "material": "cotton"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "red",
+        "material": "cotton"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "edge-14",
+      "group": "edge",
+      "expected": {
+        "status": "accepted",
+        "color": "beige",
+        "material": "linen"
+      },
+      "actual_status": "accepted",
+      "values": {
+        "color": "beige",
+        "material": "linen"
+      },
+      "correct": true,
+      "issues": []
+    },
+    {
+      "source_id": "edge-15",
+      "group": "edge",
+      "expected": {
+        "status": "excluded",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "excluded",
+      "values": {
+        "color": null,
+        "material": null
+      },
+      "correct": true,
+      "issues": [
+        "spreadsheet_formula_sku"
+      ]
+    },
+    {
+      "source_id": "edge-16",
+      "group": "edge",
+      "expected": {
+        "status": "excluded",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "excluded",
+      "values": {
+        "color": null,
+        "material": null
+      },
+      "correct": true,
+      "issues": [
+        "invalid_price"
+      ]
+    },
+    {
+      "source_id": "edge-17",
+      "group": "edge",
+      "expected": {
+        "status": "excluded",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "excluded",
+      "values": {
+        "color": null,
+        "material": null
+      },
+      "correct": true,
+      "issues": [
+        "currency_mismatch"
+      ]
+    },
+    {
+      "source_id": "edge-18",
+      "group": "edge",
+      "expected": {
+        "status": "excluded",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "excluded",
+      "values": {
+        "color": null,
+        "material": null
+      },
+      "correct": true,
+      "issues": [
+        "missing_supplier_text"
+      ]
+    },
+    {
+      "source_id": "edge-19",
+      "group": "edge",
+      "expected": {
+        "status": "excluded",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "excluded",
+      "values": {
+        "color": null,
+        "material": null
+      },
+      "correct": true,
+      "issues": [
+        "spreadsheet_formula_name"
+      ]
+    },
+    {
+      "source_id": "edge-20",
+      "group": "edge",
+      "expected": {
+        "status": "excluded",
+        "color": null,
+        "material": null
+      },
+      "actual_status": "excluded",
+      "values": {
+        "color": null,
+        "material": null
+      },
+      "correct": true,
+      "issues": [
+        "invalid_price"
+      ]
+    }
+  ],
+  "limitations": [
+    "Synthetic assistant-authored cases and labels; no human review.",
+    "Holdout was not used for prompt tuning but is not independently authored.",
+    "No measured human time baseline, willingness to pay or store import.",
+    "No PayPal API call or actual refund was made."
+  ]
+}

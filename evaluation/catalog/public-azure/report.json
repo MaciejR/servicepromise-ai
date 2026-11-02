@@ -1,0 +1,147 @@
+{
+  "contract": "catalog-textiles-v1",
+  "provider": "azure",
+  "limitations": [
+    "Local feasibility prototype; no payment is executed.",
+    "Acceptance checks a limited source grammar, not physical product truth.",
+    "Shopify import has not been tested in a store.",
+    "No human time-saving or willingness-to-pay study completed."
+  ],
+  "quote": {
+    "excluded": [],
+    "source_sha256": "f154f6c15d8b5a704571f9b8f317cc177c16ffa07d7e2bf4d945b21ef6403c38",
+    "quoted_cents": 200,
+    "service_currency": "USD",
+    "contract": "catalog-textiles-v1",
+    "product_currency": "PLN"
+  },
+  "source_rows": [
+    {
+      "source_id": "public-dvala",
+      "sku": "106.154.61",
+      "name": "DVALA Poszewka",
+      "price": "19.99",
+      "currency": "PLN",
+      "supplier_text": "Kolor: niebieski. Materiał: 100% bawełna (min. 20% z recyklingu)."
+    },
+    {
+      "source_id": "public-gurli",
+      "sku": "805.987.31",
+      "name": "GURLI Poszewka",
+      "price": "9.99",
+      "currency": "PLN",
+      "supplier_text": "Kolor: naturalny. Materiał: bawełna."
+    }
+  ],
+  "results": [
+    {
+      "source_id": "public-dvala",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "public-dvala",
+        "color": {
+          "value": "blue",
+          "term": "niebieski",
+          "quote": "Kolor: niebieski"
+        },
+        "material": {
+          "value": "cotton",
+          "term": "bawełna",
+          "quote": "Materiał: 100% bawełna"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "public-dvala",
+            "color": {
+              "value": "blue",
+              "term": "niebieski",
+              "quote": "Kolor: niebieski"
+            },
+            "material": {
+              "value": "cotton",
+              "term": "bawełna",
+              "quote": "Materiał: 100% bawełna"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "public-gurli",
+      "status": "undelivered",
+      "issues": [
+        "color_missing_evidence",
+        "color_unsupported_or_missing"
+      ],
+      "extraction": {
+        "source_id": "public-gurli",
+        "color": null,
+        "material": {
+          "value": "cotton",
+          "term": "bawełna",
+          "quote": "Materiał: bawełna"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [
+            "color_missing_evidence",
+            "color_unsupported_or_missing"
+          ],
+          "extraction": {
+            "source_id": "public-gurli",
+            "color": null,
+            "material": {
+              "value": "cotton",
+              "term": "bawełna",
+              "quote": "Materiał: bawełna"
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "issues": [
+            "color_missing_evidence",
+            "color_unsupported_or_missing"
+          ],
+          "extraction": {
+            "source_id": "public-gurli",
+            "color": null,
+            "material": {
+              "value": "cotton",
+              "term": "bawełna",
+              "quote": "Materiał: bawełna"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "settlement": {
+    "simulation": true,
+    "currency": "USD",
+    "unit_cents": 100,
+    "quoted_cents": 200,
+    "accepted_count": 1,
+    "undelivered_count": 1,
+    "refund_eligible_cents": 100,
+    "retained_cents": 100,
+    "payment_executed": false
+  },
+  "provider_metrics": {
+    "requests": 2,
+    "prompt_tokens": 1222,
+    "completion_tokens": 139,
+    "latency_seconds": 12.617999999999999,
+    "throttle_retries": 0
+  },
+  "elapsed_seconds": 12.627,
+  "prompt_version": "textiles-extract-v1",
+  "export_sha256": "1f76d4df979263003f54b8f6eada194fd933ce16f6cf0e7ba12547f47285147c"
+}

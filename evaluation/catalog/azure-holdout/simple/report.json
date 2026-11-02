@@ -1,0 +1,313 @@
+{
+  "contract": "catalog-textiles-v1",
+  "provider": "azure",
+  "limitations": [
+    "Local feasibility prototype; no payment is executed.",
+    "Acceptance checks a limited source grammar, not physical product truth.",
+    "Shopify import has not been tested in a store.",
+    "No human time-saving or willingness-to-pay study completed."
+  ],
+  "quote": {
+    "excluded": [],
+    "source_sha256": "d8b275df2bb6d96c4f5802bb4e2624be0869fedd23ff70b9d22aea9366d276f2",
+    "quoted_cents": 600,
+    "service_currency": "USD",
+    "contract": "catalog-textiles-v1",
+    "product_currency": "PLN"
+  },
+  "source_rows": [
+    {
+      "source_id": "simple-15",
+      "sku": "00-simple-15",
+      "name": "Poszewka simple-15",
+      "price": "34.90",
+      "currency": "PLN",
+      "supplier_text": "Kolor: niebieski. Materiał: poliester."
+    },
+    {
+      "source_id": "simple-16",
+      "sku": "00-simple-16",
+      "name": "Poszewka simple-16",
+      "price": "35.90",
+      "currency": "PLN",
+      "supplier_text": "Kolor: czerwony. Materiał: wełna."
+    },
+    {
+      "source_id": "simple-17",
+      "sku": "00-simple-17",
+      "name": "Poszewka simple-17",
+      "price": "36.90",
+      "currency": "PLN",
+      "supplier_text": "Kolor: zielony. Materiał: bawełna."
+    },
+    {
+      "source_id": "simple-18",
+      "sku": "00-simple-18",
+      "name": "Poszewka simple-18",
+      "price": "37.90",
+      "currency": "PLN",
+      "supplier_text": "Kolor: biały. Materiał: len."
+    },
+    {
+      "source_id": "simple-19",
+      "sku": "00-simple-19",
+      "name": "Poszewka simple-19",
+      "price": "38.90",
+      "currency": "PLN",
+      "supplier_text": "Kolor: beżowy. Materiał: poliester."
+    },
+    {
+      "source_id": "simple-20",
+      "sku": "00-simple-20",
+      "name": "Poszewka simple-20",
+      "price": "39.90",
+      "currency": "PLN",
+      "supplier_text": "Kolor: szary. Materiał: wełna."
+    }
+  ],
+  "results": [
+    {
+      "source_id": "simple-15",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "simple-15",
+        "color": {
+          "value": "blue",
+          "term": "niebieski",
+          "quote": "Kolor: niebieski"
+        },
+        "material": {
+          "value": "polyester",
+          "term": "poliester",
+          "quote": "Materiał: poliester"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "simple-15",
+            "color": {
+              "value": "blue",
+              "term": "niebieski",
+              "quote": "Kolor: niebieski"
+            },
+            "material": {
+              "value": "polyester",
+              "term": "poliester",
+              "quote": "Materiał: poliester"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "simple-16",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "simple-16",
+        "color": {
+          "value": "red",
+          "term": "czerwony",
+          "quote": "Kolor: czerwony"
+        },
+        "material": {
+          "value": "wool",
+          "term": "wełna",
+          "quote": "Materiał: wełna"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "simple-16",
+            "color": {
+              "value": "red",
+              "term": "czerwony",
+              "quote": "Kolor: czerwony"
+            },
+            "material": {
+              "value": "wool",
+              "term": "wełna",
+              "quote": "Materiał: wełna"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "simple-17",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "simple-17",
+        "color": {
+          "value": "green",
+          "term": "zielony",
+          "quote": "Kolor: zielony"
+        },
+        "material": {
+          "value": "cotton",
+          "term": "bawełna",
+          "quote": "Materiał: bawełna"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "simple-17",
+            "color": {
+              "value": "green",
+              "term": "zielony",
+              "quote": "Kolor: zielony"
+            },
+            "material": {
+              "value": "cotton",
+              "term": "bawełna",
+              "quote": "Materiał: bawełna"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "simple-18",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "simple-18",
+        "color": {
+          "value": "white",
+          "term": "biały",
+          "quote": "Kolor: biały"
+        },
+        "material": {
+          "value": "linen",
+          "term": "len",
+          "quote": "Materiał: len"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "simple-18",
+            "color": {
+              "value": "white",
+              "term": "biały",
+              "quote": "Kolor: biały"
+            },
+            "material": {
+              "value": "linen",
+              "term": "len",
+              "quote": "Materiał: len"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "simple-19",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "simple-19",
+        "color": {
+          "value": "beige",
+          "term": "beżowy",
+          "quote": "Kolor: beżowy"
+        },
+        "material": {
+          "value": "polyester",
+          "term": "poliester",
+          "quote": "Materiał: poliester"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "simple-19",
+            "color": {
+              "value": "beige",
+              "term": "beżowy",
+              "quote": "Kolor: beżowy"
+            },
+            "material": {
+              "value": "polyester",
+              "term": "poliester",
+              "quote": "Materiał: poliester"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "simple-20",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "simple-20",
+        "color": {
+          "value": "grey",
+          "term": "szary",
+          "quote": "Kolor: szary"
+        },
+        "material": {
+          "value": "wool",
+          "term": "wełna",
+          "quote": "Materiał: wełna"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "simple-20",
+            "color": {
+              "value": "grey",
+              "term": "szary",
+              "quote": "Kolor: szary"
+            },
+            "material": {
+              "value": "wool",
+              "term": "wełna",
+              "quote": "Materiał: wełna"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "settlement": {
+    "simulation": true,
+    "currency": "USD",
+    "unit_cents": 100,
+    "quoted_cents": 600,
+    "accepted_count": 6,
+    "undelivered_count": 0,
+    "refund_eligible_cents": 0,
+    "retained_cents": 600,
+    "payment_executed": false
+  },
+  "provider_metrics": {
+    "requests": 2,
+    "prompt_tokens": 1267,
+    "completion_tokens": 309,
+    "latency_seconds": 14.078,
+    "throttle_retries": 0
+  },
+  "elapsed_seconds": 14.088,
+  "prompt_version": "textiles-extract-v1",
+  "export_sha256": "6ae3b64391cd653bb362d1d2e4ef71072a35c734c7151ff72c9ca07d16795752"
+}

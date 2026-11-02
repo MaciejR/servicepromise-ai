@@ -1,0 +1,29 @@
+source_id,sku,name,price,currency,supplier_text
+messy-01,00-messy-01,Poszewka messy-01,20.90,PLN,Packaging is red and linen. Product color: blue. Product material: cotton. Wash at 30 C.
+messy-02,00-messy-02,Poszewka messy-02,21.90,PLN,Materiał: len. SKU opakowania: X1; kolor: czerwony. Kod serii 2026.
+messy-03,00-messy-03,Poszewka messy-03,22.90,PLN,Product color = green; shipped with a white label. Composition = polyester. Dimensions 40 x 40 cm.
+messy-04,00-messy-04,Poszewka messy-04,23.90,PLN,"Kolor: biały.
+Rekomendowana dekoracja: beige.
+Skład: wełna."
+messy-05,00-messy-05,Poszewka messy-05,24.90,PLN,Material: cotton. Color: beige. Supplier note: another model is grey linen.
+messy-06,00-messy-06,Poszewka messy-06,25.90,PLN,Packaging is black and polyester. Product color: grey. Product material: linen. Wash at 30 C.
+messy-07,00-messy-07,Poszewka messy-07,26.90,PLN,Materiał: poliester. SKU opakowania: X6; kolor: czarny. Kod serii 2026.
+messy-08,00-messy-08,Poszewka messy-08,27.90,PLN,Product color = blue; shipped with a red label. Composition = wool. Dimensions 40 x 40 cm.
+messy-09,00-messy-09,Poszewka messy-09,28.90,PLN,"Kolor: czerwony.
+Rekomendowana dekoracja: green.
+Skład: bawełna."
+messy-10,00-messy-10,Poszewka messy-10,29.90,PLN,Material: linen. Color: green. Supplier note: another model is white polyester.
+messy-11,00-messy-11,Poszewka messy-11,30.90,PLN,Packaging is beige and wool. Product color: white. Product material: polyester. Wash at 30 C.
+messy-12,00-messy-12,Poszewka messy-12,31.90,PLN,Materiał: wełna. SKU opakowania: X11; kolor: beżowy. Kod serii 2026.
+messy-13,00-messy-13,Poszewka messy-13,32.90,PLN,Product color = grey; shipped with a black label. Composition = cotton. Dimensions 40 x 40 cm.
+messy-14,00-messy-14,Poszewka messy-14,33.90,PLN,"Kolor: czarny.
+Rekomendowana dekoracja: blue.
+Skład: len."
+messy-15,00-messy-15,Poszewka messy-15,34.90,PLN,Material: polyester. Color: blue. Supplier note: another model is red wool.
+messy-16,00-messy-16,Poszewka messy-16,35.90,PLN,Packaging is green and cotton. Product color: red. Product material: wool. Wash at 30 C.
+messy-17,00-messy-17,Poszewka messy-17,36.90,PLN,Materiał: bawełna. SKU opakowania: X16; kolor: zielony. Kod serii 2026.
+messy-18,00-messy-18,Poszewka messy-18,37.90,PLN,Product color = white; shipped with a beige label. Composition = linen. Dimensions 40 x 40 cm.
+messy-19,00-messy-19,Poszewka messy-19,38.90,PLN,"Kolor: beżowy.
+Rekomendowana dekoracja: grey.
+Skład: poliester."
+messy-20,00-messy-20,Poszewka messy-20,39.90,PLN,Material: wool. Color: grey. Supplier note: another model is black cotton.

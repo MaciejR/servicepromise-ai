@@ -1,0 +1,131 @@
+{
+  "contract": "catalog-textiles-v1",
+  "provider": "azure",
+  "limitations": [
+    "Local feasibility prototype; no payment is executed.",
+    "Acceptance checks a limited source grammar, not physical product truth.",
+    "Shopify import has not been tested in a store.",
+    "No human time-saving or willingness-to-pay study completed."
+  ],
+  "quote": {
+    "excluded": [
+      {
+        "line": 3,
+        "source_id": "edge-15",
+        "issues": [
+          "spreadsheet_formula_sku"
+        ]
+      },
+      {
+        "line": 4,
+        "source_id": "edge-16",
+        "issues": [
+          "invalid_price"
+        ]
+      },
+      {
+        "line": 5,
+        "source_id": "edge-17",
+        "issues": [
+          "currency_mismatch"
+        ]
+      },
+      {
+        "line": 6,
+        "source_id": "edge-18",
+        "issues": [
+          "missing_supplier_text"
+        ]
+      },
+      {
+        "line": 7,
+        "source_id": "edge-19",
+        "issues": [
+          "spreadsheet_formula_name"
+        ]
+      },
+      {
+        "line": 8,
+        "source_id": "edge-20",
+        "issues": [
+          "invalid_price"
+        ]
+      }
+    ],
+    "source_sha256": "1c1dfd1713f532cb46381b012a8e2a77128fd1fab4ae5e8b12847c553a40e902",
+    "quoted_cents": 100,
+    "service_currency": "USD",
+    "contract": "catalog-textiles-v1",
+    "product_currency": "PLN"
+  },
+  "source_rows": [
+    {
+      "source_id": "edge-14",
+      "sku": "00-edge-14",
+      "name": "Poszewka edge-14",
+      "price": "33.90",
+      "currency": "PLN",
+      "supplier_text": "Kolor: beżowy. Materiał: len.\nOpis zawiera przecinek, a także \"cudzysłów\"."
+    }
+  ],
+  "results": [
+    {
+      "source_id": "edge-14",
+      "status": "accepted",
+      "issues": [],
+      "extraction": {
+        "source_id": "edge-14",
+        "color": {
+          "value": "beige",
+          "term": "beżowy",
+          "quote": "Kolor: beżowy"
+        },
+        "material": {
+          "value": "linen",
+          "term": "len",
+          "quote": "Materiał: len"
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "issues": [],
+          "extraction": {
+            "source_id": "edge-14",
+            "color": {
+              "value": "beige",
+              "term": "beżowy",
+              "quote": "Kolor: beżowy"
+            },
+            "material": {
+              "value": "linen",
+              "term": "len",
+              "quote": "Materiał: len"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "settlement": {
+    "simulation": true,
+    "currency": "USD",
+    "unit_cents": 100,
+    "quoted_cents": 100,
+    "accepted_count": 1,
+    "undelivered_count": 0,
+    "refund_eligible_cents": 0,
+    "retained_cents": 100,
+    "payment_executed": false
+  },
+  "provider_metrics": {
+    "requests": 1,
+    "prompt_tokens": 593,
+    "completion_tokens": 52,
+    "latency_seconds": 5.715,
+    "throttle_retries": 0
+  },
+  "elapsed_seconds": 5.717,
+  "prompt_version": "textiles-extract-v1",
+  "export_sha256": "23e7c9d9338d6a88889d8a5bcbda27bae4c150c20fde3bc04f616256eb289673"
+}
