@@ -4,6 +4,8 @@ Prepare a small supplier catalogue, inspect the source evidence and account for 
 
 **Hosted pilot:** https://api-servicepromise-mr-2026.azurewebsites.net/
 
+**Source:** https://github.com/MaciejR/servicepromise-ai
+
 The catalogue workflow supports a context-aware rules baseline and operator-protected Azure OpenAI. Payments and per-item refund calculations in this workflow are **simulated**. PayPal Sandbox has not been connected to catalogue jobs. This is a feasibility MVP, not a production payment platform or a completed hackathon submission.
 
 ## Try the hosted pilot
