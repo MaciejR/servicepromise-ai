@@ -8,3 +8,7 @@ __pycache__/
 *.db-*
 *.pyc
 .DS_Store
+
+*.sqlite
+*.tsbuildinfo
+backend/static/
