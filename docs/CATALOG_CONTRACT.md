@@ -1,6 +1,6 @@
 # Kontrakt prototypu: catalog-textiles-v1
 
-Status: lokalny prototyp T0–T1, bez integracji nowego procesu z publiczną aplikacją i bez transakcji płatniczych.
+Zakres dokumentu: historyczny kontrakt lokalnego prototypu T0–T1. Aktualny publiczny przepływ i zweryfikowana integracja Sandbox są opisane w README.md oraz SANDBOX_VERIFICATION.md; opis CLI poniżej nadal dotyczy lokalnego procesu bez transakcji.
 
 ## Wejście
 

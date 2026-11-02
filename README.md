@@ -15,7 +15,7 @@ The catalogue workflow supports a context-aware rules baseline and operator-prot
 3. Check the quote. Invalid rows are excluded before payment. Keep Demo selected for a no-account walkthrough; Sandbox requires operator access.
 4. Select **Simulate payment & process**, or create Sandbox checkout, approve its test payment and then confirm capture in the app.
 5. Inspect the product outcomes and expand an item to see source evidence and validation errors.
-6. Download accepted products as draft CSV and the JSON evidence report.
+6. Download accepted products as draft CSV and the JSON evidence report. For Sandbox, issue the eligible policy refund with operator access and check its confirmed status.
 
 The included example has four rows: one excluded before quoting, two delivered, and one undelivered after a repair attempt. The service quote is USD 3 and simulated refund eligibility is USD 1. No money moves.
 
@@ -77,7 +77,7 @@ npm run build
 
 Current local suite: **59 tests passed**, including capability isolation, proportional and full simulated refunds, recovery after interrupted processing, concurrent worker requests, migration backup, source evidence, API downloads and operator gating. TypeScript and Vite production build pass. The catalogue UI has been exercised in Chrome with the example data.
 
-Remaining external checks: original supplier files reviewed by a human, measured end-user time savings, actual store import, a complete verified Sandbox capture/refund flow (see the latest Sandbox verification record). Do not present mocked tests or simulated settlements as completed payment integration.
+Remaining external checks: original supplier files reviewed by a human, measured end-user time savings, actual store import, final video and hackathon submission. A real Sandbox capture/refund flow passed locally and in Azure; see the [verification record](docs/SANDBOX_VERIFICATION.md). Do not present mocked tests or simulated settlements as completed payment integration.
 
 ## Project records
 
@@ -87,7 +87,7 @@ Remaining external checks: original supplier files reviewed by a human, measured
 - [Release progress](docs/RELEASE_PROGRESS.md)
 - [Video outline](docs/DEMO_SCRIPT.md)
 
-An earlier marketing-brief experiment remains accessible at `/?legacy=1`; its payment/model behavior is separate from catalogue jobs. The existing Sandbox adapter is part of that earlier flow, and still requires an external end-to-end test. See [legacy notes](docs/LEGACY_README.md).
+An earlier marketing-brief experiment remains accessible at `/?legacy=1`; its payment/model behavior is separate from catalogue jobs. The earlier brief adapter is separate from the now-verified catalogue Sandbox flow. See [legacy notes](docs/LEGACY_README.md).
 
 ## License
 
@@ -96,3 +96,5 @@ MIT. See [LICENSE](LICENSE).
 ## Sandbox payment safety
 
 Only `api-m.sandbox.paypal.com` is used. Delivery starts after PayPal confirms the exact USD capture. Create/capture/refund operations use stable per-job IDs and persist their intent before a network call. A capture retry first checks the PayPal order. Pending refunds remain pending until confirmed by a status read. Uncertain operations older than one hour require manual reconciliation rather than issuing a new transaction. A single process serializes financial operations; multi-instance deployment is unsupported. These controls do not make this a production payment platform.
+
+Verified Sandbox scenario: **USD 2 captured → real Azure OpenAI extraction → one delivered item / one undelivered item → USD 1 refund confirmed → retry returns the same refund ID**. This passed on the deployed Azure backend; no real funds were used.
