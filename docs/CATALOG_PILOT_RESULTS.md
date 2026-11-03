@@ -1,5 +1,11 @@
 # ServicePromise AI — wyniki prototypu T0–T1
 
+## Follow-up on product versus packaging context, 3 November 2026
+
+The revised Azure prompt asks for an exact quotation describing the product and abstains when the product color is absent. On eight new synthetic descriptions, the rules provider correctly identified the color or its absence in 3/8 cases and Azure in 7/8. The shared contract accepted two correct rows with either provider. It accepted two incorrect packaging colors from rules and none from Azure in this run. Two correct Azure suggestions were withheld because the validator still found competing colors. The remaining Azure error was an abstention on a product color stated in the source.
+
+The application labels extracted values on withheld items as unverified proposals. A proposal does not enter the exported CSV or count as a delivered item. The test used one evaluation run per provider, a small synthetic sample and labels authored with the experiment. Operator review time and performance on original supplier data remain unmeasured.
+
 2 listopada 2026. Wynik: lokalny prototyp działa, ale nie potwierdziliśmy przewagi AI ani wartości biznesowej scenariusza.
 
 ## Co wykonano

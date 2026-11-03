@@ -1,6 +1,6 @@
 # Devpost submission draft
 
-Status: ready-to-review text; not submitted. The final video link must be added after recording.
+Status: draft. The recorded demo still needs a continuous walkthrough segment and a public YouTube link.
 
 ## Project name
 
@@ -20,7 +20,7 @@ Our pilot prepares simple textile catalogue entries from supplier text. It is a 
 
 Upload a small CSV, review excluded rows and a fixed service quote, then choose a demo or operator-protected PayPal Sandbox checkout. Real Azure OpenAI can extract color and material with literal source evidence. A deterministic validator checks the limited contract and gives an unsuccessful item one repair attempt. Accepted products are exported as drafts; undelivered products are eligible for their entire individual service fee.
 
-The verified Azure scenario captured USD 2 in PayPal Sandbox, delivered one item using the real model, marked a second item undelivered, and issued a USD 1 partial refund that PayPal confirmed as completed. Retrying the refund returned the same refund ID. No real funds were used.
+The recorded Azure scenario captured USD 3 in PayPal Sandbox. Azure OpenAI processed three products, two were delivered, and one was marked undelivered after two attempts. The operator issued a USD 1 partial refund and PayPal confirmed it. Refreshing restored the results and payment status. The demo uses Sandbox funds.
 
 ## How we built it
 
@@ -34,7 +34,20 @@ Azure OpenAI supplies an extraction result and source quotations. The model cann
 
 In the first feasibility experiment, both the model and a context-aware rules parser matched all 60 provisional synthetic labels. The deterministic parser was substantially faster. This does not prove an AI advantage, and the small, assistant-authored corpus is not independent business validation. We keep the baseline available and disclose the result rather than presenting AI as automatically superior.
 
+On eight fresh synthetic product-versus-packaging descriptions, the revised Azure prompt correctly identified the product color or abstained in 7/8 cases, compared with 3/8 for the rules provider. The shared validator still withheld two correct Azure proposals. The UI labels such proposals as unverified. Export and refund eligibility follow the validated delivery result.
+
 The integration work was also a state-management problem: an API timeout is not evidence that a capture or refund did not happen. Persistence, stable request IDs and reconciliation matter as much as the checkout button.
+
+## Reproduce the Sandbox walkthrough
+
+Follow the repository README to run the frontend and backend locally. In the backend `.env`, set `CATALOG_PAYPAL_SANDBOX_ENABLED=true`, configure the PayPal Sandbox and Azure OpenAI settings listed in `.env.example`, and set a random `OPERATOR_TOKEN` of at least 32 characters. Set `PUBLIC_URL` to the frontend origin used for the walkthrough.
+
+1. Open the app in a fresh browser session. Use the included example, choose Azure OpenAI and PayPal Sandbox, and enter the operator token.
+2. Check the quote for three included rows and one exclusion. Create a Sandbox checkout, approve with a Sandbox buyer, return to the app, and capture the USD 3 test payment.
+3. Inspect the accepted rows and the source quotations. The missing-material row should remain undelivered. Download the draft CSV and the evidence report.
+4. Re-enter the operator token if the checkout redirect cleared it. Issue the USD 1 policy refund and check its status until PayPal confirms it. Refresh the page to check that the same result is restored.
+
+The hosted public walkthrough starts in simulation mode. Full hosted verification requires a privately provisioned operator path. The local steps above still need an independent run before submission.
 
 ## What is next
 
@@ -45,7 +58,7 @@ Evaluate original supplier files with a human operator, measure total preparatio
 - Hosted build: https://api-servicepromise-mr-2026.azurewebsites.net/
 - Public source and MIT license: https://github.com/MaciejR/servicepromise-ai
 - Sandbox verification: https://github.com/MaciejR/servicepromise-ai/blob/main/docs/SANDBOX_VERIFICATION.md
-- Demo video: PENDING RECORDING — do not submit this placeholder.
+- Demo video: The 2:38 English draft is recorded. Add a continuous walkthrough segment and insert the public YouTube URL before submission.
 
 ## Tools
 

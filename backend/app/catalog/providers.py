@@ -25,7 +25,14 @@ If validation errors from a previous attempt are supplied, fix only the extracti
 using the same source. Do not guess a missing fact to satisfy validation.
 """.replace("{vocabulary}", json.dumps(ALIASES, ensure_ascii=False))
 # Braces above are ordinary text, not str.format placeholders.
-SYSTEM_PROMPT = SYSTEM_PROMPT.replace("{{", "{").replace("}}", "}")
+SYSTEM_PROMPT = SYSTEM_PROMPT.replace("{{", "{").replace("}}", "}") + """
+A color term is eligible only when its exact quote explicitly describes the textile item
+(e.g. 'red cotton runner', 'bieżnik jest szary', or an explicit product color field).
+Reject color terms modifying packaging, sleeves, wrappers, boxes, labels or transport
+materials. A single color mention is not enough. If the description states that
+the product shade is missing, or lists unconfirmed variants, return null for color.
+For inflected Polish words without an exact allowed alias, return null.
+"""
 
 
 class ProviderError(RuntimeError):

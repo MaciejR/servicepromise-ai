@@ -17,6 +17,8 @@ The catalogue workflow supports a context-aware rules baseline and operator-prot
 5. Inspect the product outcomes and expand an item to see source evidence and validation errors.
 6. Download accepted products as draft CSV and the JSON evidence report. For Sandbox, issue the eligible policy refund with operator access and check its confirmed status.
 
+For Azure runs, a color proposal must cite text about the product. An undelivered result can expose unverified proposals for review. Export and settlement use only rows that pass validation.
+
 The included example has four rows: one excluded before quoting, two delivered, and one undelivered after a repair attempt. The service quote is USD 3 and simulated refund eligibility is USD 1. No money moves.
 
 The latest job capability is held in session storage. Reloading the same tab restores it. There are no user accounts, cross-device recovery or production authentication. Do not upload confidential customer data to this public pilot.
@@ -75,7 +77,7 @@ cd ../frontend
 npm run build
 ```
 
-Current local suite: **59 tests passed**, including capability isolation, proportional and full simulated refunds, recovery after interrupted processing, concurrent worker requests, migration backup, source evidence, API downloads and operator gating. TypeScript and Vite production build pass. The catalogue UI has been exercised in Chrome with the example data.
+Current local suite: **60 tests passed**, including capability isolation, proportional and full simulated refunds, recovery after interrupted processing, concurrent worker requests, migration backup, source evidence, API downloads and operator gating. TypeScript and Vite production build pass. The catalogue UI has been exercised in Chrome with the example data.
 
 Remaining external checks: original supplier files reviewed by a human, measured end-user time savings, actual store import, final video and hackathon submission. A real Sandbox capture/refund flow passed locally and in Azure; see the [verification record](docs/SANDBOX_VERIFICATION.md). Do not present mocked tests or simulated settlements as completed payment integration.
 

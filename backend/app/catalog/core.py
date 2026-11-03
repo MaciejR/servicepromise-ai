@@ -161,8 +161,12 @@ def validate(row: SourceRow, extraction: Extraction) -> list[str]:
         evidence = getattr(extraction, attribute)
         possible, found = candidates(row.supplier_text, attribute)
         # A single mentioned value is not necessarily an asserted product fact.
-        if any(re.search(r"(?:\bnot\b|\bnie\b|\bbez\b|\bwithout\b|\bno\b)\W+(?:\w+\W+){0,2}$",
-                         row.supplier_text[max(0, start-35):start], re.I) for _, _, start, _ in found):
+        if any(
+            re.search(r"(?:\bnot\b|\bnie\b|\bbez\b|\bwithout\b|\bno\b)\W+(?:\w+\W+){0,2}$",
+                      row.supplier_text[max(0, start-35):start], re.I)
+            or re.match(r"[-‐‑–]free\b", row.supplier_text[end:end+6], re.I)
+            for _, _, start, end in found
+        ):
             issues.append(f"{attribute}_negated_or_unsupported_context")
         if len(possible) != 1:
             issues.append(f"{attribute}_{'ambiguous' if possible else 'unsupported_or_missing'}")

@@ -84,7 +84,8 @@ def test_evidence_from_incidental_text_cannot_override_product_field():
 
 
 @pytest.mark.parametrize("text", ["Color: blue or red. Material: cotton.", "Color: not blue. Material: cotton.",
-                                 "Blue. Material: cotton or polyester.", "Material: cotton."])
+                                 "Blue. Material: cotton or polyester.", "Material: cotton.",
+                                 "Color: grey. Wool-free. Fibre composition unavailable."])
 def test_missing_conflicting_blended_and_negated_attributes_remain_undelivered(text):
     report, exported = process(csv_bytes(row(supplier_text=text)), "PLN", RuleProvider())
     assert report["settlement"]["refund_eligible_cents"] == 100
