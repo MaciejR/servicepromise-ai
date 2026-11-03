@@ -11,3 +11,7 @@ No live funds or real customer card data are used. The public default remains De
 Deployment: `a17d080f-99fe-4f99-ab13-486078ead8dc` (OneDeploy status 4, successful). GitHub integration commit `c66f898` passed backend and frontend CI. Full refunds were tested with mocked providers; actual provider end-to-end verification covered a partial refund. No claim of live-money readiness is made.
 
 A subsequent Azure App Service restart preserved the completed catalogue results, confirmed capture/refund records and the original refund ID. No additional capture or refund was issued by this persistence check.
+
+## Release verification — 3 November 2026
+
+Azure deployment `af1b5bd0-0ed7-48a9-94ac-ff3a030a814c` ran a fresh guest checkout against PayPal Sandbox. The app captured USD 3, processed three included rows through Azure OpenAI, delivered two and left one undelivered. The invalid-price row was excluded before checkout. Both protected exports returned successfully with job access, and the job endpoint returned 404 without it. PayPal confirmed a USD 1 partial refund. Retrying returned the original refund ID. The release passed 60 backend tests and the frontend build in GitHub Actions.

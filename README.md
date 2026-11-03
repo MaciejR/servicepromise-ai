@@ -79,7 +79,7 @@ npm run build
 
 Current local suite: **60 tests passed**, including capability isolation, proportional and full simulated refunds, recovery after interrupted processing, concurrent worker requests, migration backup, source evidence, API downloads and operator gating. TypeScript and Vite production build pass. The catalogue UI has been exercised in Chrome with the example data.
 
-Remaining external checks: original supplier files reviewed by a human, measured end-user time savings, actual store import, final video and hackathon submission. A real Sandbox capture/refund flow passed locally and in Azure; see the [verification record](docs/SANDBOX_VERIFICATION.md). Do not present mocked tests or simulated settlements as completed payment integration.
+Remaining external checks: original supplier files reviewed by a human, measured end-user time savings, actual store import, public video link and hackathon submission. A real Sandbox capture/refund flow passed locally and in Azure; see the [verification record](docs/SANDBOX_VERIFICATION.md). Do not present mocked tests or simulated settlements as completed payment integration.
 
 ## Project records
 

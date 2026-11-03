@@ -1,6 +1,6 @@
 # Devpost submission draft
 
-Status: draft. The recorded demo still needs a continuous walkthrough segment and a public YouTube link.
+Status: submission copy prepared. The final 2:36 English walkthrough is recorded. Add its public YouTube URL before submitting.
 
 ## Project name
 
@@ -47,7 +47,7 @@ Follow the repository README to run the frontend and backend locally. In the bac
 3. Inspect the accepted rows and the source quotations. The missing-material row should remain undelivered. Download the draft CSV and the evidence report.
 4. Re-enter the operator token if the checkout redirect cleared it. Issue the USD 1 policy refund and check its status until PayPal confirms it. Refresh the page to check that the same result is restored.
 
-The hosted public walkthrough starts in simulation mode. Full hosted verification requires a privately provisioned operator path. The local steps above still need an independent run before submission.
+The public Azure walkthrough runs in simulation mode without an account. The full flow requires the operator token on Azure or your own Sandbox and Azure OpenAI configuration locally. The deployed flow was verified on 3 November 2026.
 
 ## What is next
 
@@ -58,7 +58,7 @@ Evaluate original supplier files with a human operator, measure total preparatio
 - Hosted build: https://api-servicepromise-mr-2026.azurewebsites.net/
 - Public source and MIT license: https://github.com/MaciejR/servicepromise-ai
 - Sandbox verification: https://github.com/MaciejR/servicepromise-ai/blob/main/docs/SANDBOX_VERIFICATION.md
-- Demo video: The 2:38 English draft is recorded. Add a continuous walkthrough segment and insert the public YouTube URL before submission.
+- Demo video: Final English walkthrough (2:36). Public YouTube URL pending.
 
 ## Tools
 
