@@ -8,6 +8,55 @@ from app.catalog.providers import RuleProvider
 CSV = b'source_id,sku,name,price,currency,supplier_text\n1,001,Pillow,20.00,PLN,Color: blue. Material: cotton.\n2,002,Case,30.00,PLN,Color: green.\n'
 
 
+def test_public_api_assesses_source_before_quoting(store, monkeypatch):
+    from fastapi import FastAPI
+    from fastapi.testclient import TestClient
+    from app.catalog import routes
+    monkeypatch.setattr(routes, 'engine', store.engine)
+    monkeypatch.setattr(routes, 'jobs', store)
+    app = FastAPI()
+    app.include_router(routes.router)
+    client = TestClient(app)
+    body = {'csv': CSV.decode(), 'currency': 'PLN'}
+    checked = client.post('/api/catalog/jobs/assessment', json=body)
+    assert checked.status_code == 200
+    assessment = checked.json()
+    assert assessment['quoted_cents'] == 100
+    assert [r['source_id'] for r in assessment['rows']] == ['1']
+    assert assessment['excluded'][0]['source_id'] == '2'
+    assert 'material_unsupported_or_missing' in assessment['excluded'][0]['issues']
+    # Direct creation repeats the check server-side.
+    response = client.post('/api/catalog/jobs', json=body)
+    assert response.status_code == 201
+    job = response.json()
+    assert job['snapshot']['contract'] == 'catalog-textiles-v2'
+    assert job['snapshot']['quoted_cents'] == assessment['quoted_cents']
+    store.checkout(job['id'], job['access_token'])
+    store.tick(RuleProvider())
+    final = store.get(job['id'], job['access_token'])
+    assert final['settlement']['accepted_count'] == 1
+    assert final['settlement']['refund_eligible_cents'] == 0
+
+
+def test_all_unsuitable_rows_report_without_creating_a_quote(store, monkeypatch):
+    from fastapi import FastAPI
+    from fastapi.testclient import TestClient
+    from app.catalog import routes
+    monkeypatch.setattr(routes, 'engine', store.engine)
+    monkeypatch.setattr(routes, 'jobs', store)
+    app = FastAPI()
+    app.include_router(routes.router)
+    client = TestClient(app)
+    source = 'source_id,sku,name,price,currency,supplier_text\n1,001,Towel,10,PLN,Color: blue. Material: silk.\n'
+    body = {'csv': source, 'currency': 'PLN'}
+    assessment = client.post('/api/catalog/jobs/assessment', json=body).json()
+    assert assessment['rows'] == []
+    assert assessment['quoted_cents'] == 0
+    assert assessment['excluded']
+    assert client.post('/api/catalog/jobs', json=body).status_code == 422
+    assert not store.tick()
+
+
 @pytest.fixture
 def store(tmp_path):
     jobs = Jobs(create_engine('sqlite:///'+str(tmp_path/'catalog.db'), connect_args={'check_same_thread':False}))
@@ -92,7 +141,8 @@ def test_api_flow(store, monkeypatch):
                 break
             time.sleep(0.01)
         assert result['status'] == 'completed'
-        assert result['settlement']['refund_eligible_cents'] == 100
+        assert result['snapshot']['quoted_cents'] == 100
+        assert result['settlement']['refund_eligible_cents'] == 0
         assert client.get(url+'/products.csv', headers=headers).status_code == 200
         assert client.get(url+'/report.json').status_code == 404
         evidence = client.get(url+'/report.json', headers=headers)

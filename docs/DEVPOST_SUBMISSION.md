@@ -1,6 +1,6 @@
 # Devpost submission draft
 
-Status: submission copy prepared. The final 2:36 English walkthrough is recorded. Add its public YouTube URL before submitting.
+Status: draft updated for v2 source assessment. Public video https://youtu.be/Dm09A60KTe4 records the verified v1 Sandbox refund scenario. Current v2 excludes source deficiencies before quoting.
 
 ## Project name
 
@@ -18,7 +18,7 @@ Our pilot prepares simple textile catalogue entries from supplier text. It is a 
 
 ## What it does
 
-Upload a small CSV, review excluded rows and a fixed service quote, then choose a demo or operator-protected PayPal Sandbox checkout. Real Azure OpenAI can extract color and material with literal source evidence. A deterministic validator checks the limited contract and gives an unsuccessful item one repair attempt. Accepted products are exported as drafts; undelivered products are eligible for their entire individual service fee.
+Upload a small CSV, inspect the free deterministic source assessment and download its report, review eligible rows and a fixed test quote, then choose a demo or operator-protected PayPal Sandbox checkout. Real Azure OpenAI can extract color and material with literal source evidence. A deterministic validator checks the limited contract and gives an unsuccessful item one repair attempt. Accepted products are exported as drafts; undelivered products are eligible for their entire individual service fee.
 
 The recorded Azure scenario captured USD 3 in PayPal Sandbox. Azure OpenAI processed three products, two were delivered, and one was marked undelivered after two attempts. The operator issued a USD 1 partial refund and PayPal confirmed it. Refreshing restored the results and payment status. The demo uses Sandbox funds.
 
@@ -43,11 +43,13 @@ The integration work was also a state-management problem: an API timeout is not 
 Follow the repository README to run the frontend and backend locally. In the backend `.env`, set `CATALOG_PAYPAL_SANDBOX_ENABLED=true`, configure the PayPal Sandbox and Azure OpenAI settings listed in `.env.example`, and set a random `OPERATOR_TOKEN` of at least 32 characters. Set `PUBLIC_URL` to the frontend origin used for the walkthrough.
 
 1. Open the app in a fresh browser session. Use the included example, choose Azure OpenAI and PayPal Sandbox, and enter the operator token.
-2. Check the quote for three included rows and one exclusion. Create a Sandbox checkout, approve with a Sandbox buyer, return to the app, and capture the USD 3 test payment.
-3. Inspect the accepted rows and the source quotations. The missing-material row should remain undelivered. Download the draft CSV and the evidence report.
-4. Re-enter the operator token if the checkout redirect cleared it. Issue the USD 1 policy refund and check its status until PayPal confirms it. Refresh the page to check that the same result is restored.
+2. Check source suitability. The current example excludes the invalid price and missing material, leaving two eligible rows. Create the USD 2 test quote and Sandbox checkout, approve with a Sandbox buyer, return to the app and capture.
+3. Inspect both delivered rows and the source quotations. Download the draft CSV and evidence report. The missing-material row appears in the assessment report before payment.
+4. Refresh to verify recovery of the accepted quote and results. The public video and verification record show the earlier v1 USD 3 capture and USD 1 refund; this is a historical integration demonstration. The current example has no refund when both quoted rows are delivered.
 
 The public Azure walkthrough runs in simulation mode without an account. The full flow requires the operator token on Azure or your own Sandbox and Azure OpenAI configuration locally. The deployed flow was verified on 3 November 2026.
+
+The real-data diagnostic used 20 records each from Flipkart, H&M and WDC-PAVE. Rules and Azure each delivered three Flipkart rows and zero rows in the other samples under the limited contract. This does not establish an AI benefit. H&M descriptions omitted color and sampled WDC materials were unsupported. Missing input is now addressed before a new quote.
 
 ## What is next
 
@@ -58,7 +60,7 @@ Evaluate original supplier files with a human operator, measure total preparatio
 - Hosted build: https://api-servicepromise-mr-2026.azurewebsites.net/
 - Public source and MIT license: https://github.com/MaciejR/servicepromise-ai
 - Sandbox verification: https://github.com/MaciejR/servicepromise-ai/blob/main/docs/SANDBOX_VERIFICATION.md
-- Demo video: Final English walkthrough (2:36). Public YouTube URL pending.
+- Demo video: Final English walkthrough (2:36). https://youtu.be/Dm09A60KTe4
 
 ## Tools
 

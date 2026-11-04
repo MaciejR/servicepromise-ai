@@ -12,6 +12,7 @@ from decimal import Decimal, InvalidOperation
 from pydantic import BaseModel, ConfigDict, Field
 
 VERSION = "catalog-textiles-v1"
+ASSESSED_VERSION = "catalog-textiles-v2"
 COLUMNS = ["source_id", "sku", "name", "price", "currency", "supplier_text"]
 MAX_ROWS, MAX_BYTES = 20, 256 * 1024
 SERVICE_UNIT_CENTS = 100
@@ -198,6 +199,22 @@ def rule_extract(row: SourceRow) -> Extraction:
             value, term, _, _ = found[0]
             result[attribute] = Evidence(value=value, term=term, quote=term)
     return Extraction(**result)
+
+
+def assess_source(data: bytes, currency: str) -> dict:
+    """Conservative, model-free eligibility check before creating a new quote."""
+    report = preflight(data, currency)
+    eligible = []
+    for row in report["rows"]:
+        issues = validate(row, rule_extract(row))
+        if issues:
+            report["excluded"].append({"source_id": row.source_id,
+                                       "stage": "source_review", "issues": issues})
+        else:
+            eligible.append(row)
+    report.update(rows=eligible, quoted_cents=len(eligible) * SERVICE_UNIT_CENTS,
+                  contract=ASSESSED_VERSION)
+    return report
 
 
 def settlement(results: list[dict]) -> dict:

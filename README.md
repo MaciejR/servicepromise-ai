@@ -12,14 +12,14 @@ The catalogue workflow supports a context-aware rules baseline and operator-prot
 
 1. Use the included example or upload/paste a UTF-8 CSV (up to 20 products, 256 KiB).
 2. Select the product currency and the rules baseline. Azure requires the private operator token and incurs model usage; the token stays in UI memory.
-3. Check the quote. Invalid rows are excluded before payment. Keep Demo selected for a no-account walkthrough; Sandbox requires operator access.
+3. Select **Check source suitability** and review or download the report. Rows without supported, unambiguous source evidence are excluded. Select **Create quote** for eligible rows. Keep Demo selected for a no-account walkthrough; Sandbox requires operator access.
 4. Select **Simulate payment & process**, or create Sandbox checkout, approve its test payment and then confirm capture in the app.
 5. Inspect the product outcomes and expand an item to see source evidence and validation errors.
 6. Download accepted products as draft CSV and the JSON evidence report. For Sandbox, issue the eligible policy refund with operator access and check its confirmed status.
 
 For Azure runs, a color proposal must cite text about the product. An undelivered result can expose unverified proposals for review. Export and settlement use only rows that pass validation.
 
-The included example has four rows: one excluded before quoting, two delivered, and one undelivered after a repair attempt. The service quote is USD 3 and simulated refund eligibility is USD 1. No money moves.
+The included example has four rows. The invalid price and missing material are excluded before payment. Two eligible rows receive a USD 2 test quote. The USD 1 per-row amount is a Sandbox/demo rate. The public video records the earlier v1 flow, where the missing-material row was assessed after capture and refunded. New HTTP jobs use v2 source assessment; persisted v1 jobs retain their original quotes and policy.
 
 The latest job capability is held in session storage. Reloading the same tab restores it. There are no user accounts, cross-device recovery or production authentication. Do not upload confidential customer data to this public pilot.
 
@@ -31,7 +31,7 @@ Input header:
 source_id,sku,name,price,currency,supplier_text
 ```
 
-Source SKU, price and currency are authoritative and preserved. Color and material are normalized from a small explicit vocabulary, with source evidence. Missing, conflicting or unsupported attributes prevent acceptance. There is one initial attempt and at most one repair. Undelivered items are eligible for their entire individual service fee; complete non-delivery means a full simulated refund.
+Source suitability is checked with the existing deterministic validator before new HTTP quotes. No model calls or persistent jobs are required for this assessment, and a file with zero eligible rows still receives a downloadable report. Missing and unsupported values share one reason when the narrow vocabulary cannot distinguish them. This conservative gate can also exclude source text that a model could resolve. Source SKU, price and currency are authoritative and preserved. Color and material are normalized from a small explicit vocabulary, with source evidence. Missing, conflicting or unsupported attributes prevent acceptance. There is one initial attempt and at most one repair. Undelivered items are eligible for their entire individual service fee; complete non-delivery means a full simulated refund.
 
 Service fees are in USD; product prices retain their source currency. Exporting does not convert currencies. Confirm that your store uses the same product currency. The draft Shopify CSV profile follows documented headers but has **not** been tested by importing into a store.
 

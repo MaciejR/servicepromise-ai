@@ -10,7 +10,7 @@ from pathlib import Path
 from contextlib import closing
 from uuid import uuid4
 from sqlalchemy import text
-from .core import ALIASES, VERSION, Extraction, SourceRow, export_csv, preflight, settlement, validate
+from .core import ALIASES, VERSION, ASSESSED_VERSION, Extraction, SourceRow, assess_source, export_csv, preflight, settlement, validate
 from .providers import AzureProvider, ProviderError, RuleProvider
 
 
@@ -56,12 +56,12 @@ class Jobs:
         with self.engine.begin() as db:
             db.execute(text("UPDATE catalog_jobs SET status='queued' WHERE status='running'"))
 
-    def create(self, data, currency, provider='rules', payment_mode='demo'):
+    def create(self, data, currency, provider='rules', payment_mode='demo', *, source_assessment=False):
         if payment_mode not in {'demo','sandbox'}:
             raise ValueError('Only demo and Sandbox payments are supported')
         if provider not in {'rules', 'azure'}:
             raise ValueError('Unsupported extraction provider')
-        quote = preflight(data, currency)
+        quote = assess_source(data, currency) if source_assessment else preflight(data, currency)
         if not quote['rows']:
             raise ValueError('No valid rows to quote')
         token = secrets.token_urlsafe(32)
@@ -125,7 +125,7 @@ class Jobs:
                 provider = RuleProvider()
         outcomes = json.loads(job['results'])
         rows = [SourceRow(**r) for r in snapshot['rows']]
-        compatible = snapshot['contract'] == VERSION and snapshot['aliases'] == ALIASES
+        compatible = snapshot['contract'] in {VERSION, ASSESSED_VERSION} and snapshot['aliases'] == ALIASES
         for row in rows:
             current = next((r for r in outcomes if r['source_id'] == row.source_id), None)
             if current is None:

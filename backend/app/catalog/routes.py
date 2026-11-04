@@ -3,7 +3,7 @@ import secrets
 from fastapi import APIRouter, Header, HTTPException, Response
 from pydantic import BaseModel, Field
 from ..db import engine
-from .core import ContractError
+from .core import ContractError, assess_source
 from .jobs import Jobs
 from ..config import settings
 from .payments import Payments
@@ -45,8 +45,17 @@ def create(body: Input, x_operator_token: str = Header(default='')):
         if not all([cfg.azure_openai_endpoint, cfg.azure_openai_api_key, cfg.azure_openai_deployment]):
             raise HTTPException(503, 'Azure extraction is not configured')
     try:
-        return jobs.create(body.csv.encode(), body.currency, body.provider, body.payment_mode)
+        return jobs.create(body.csv.encode(), body.currency, body.provider, body.payment_mode,
+                           source_assessment=True)
     except (ContractError, ValueError) as exc:
+        raise HTTPException(422, str(exc)) from None
+
+
+@router.post('/assessment')
+def assessment(body: Input):
+    try:
+        return assess_source(body.csv.encode(), body.currency)
+    except ContractError as exc:
         raise HTTPException(422, str(exc)) from None
 
 
