@@ -19,7 +19,7 @@ The catalogue workflow supports a context-aware rules baseline and operator-prot
 
 For Azure runs, a color proposal must cite text about the product. An undelivered result can expose unverified proposals for review. Export and settlement use only rows that pass validation.
 
-The included example has four rows. The invalid price and missing material are excluded before payment. Two eligible rows receive a USD 2 test quote. The USD 1 per-row amount is a Sandbox/demo rate. The public video records the earlier v1 flow, where the missing-material row was assessed after capture and refunded. New HTTP jobs use v2 source assessment; persisted v1 jobs retain their original quotes and policy.
+The included example has four rows. The invalid price and missing material are excluded before payment. Two eligible rows receive a USD 2 test quote. The USD 1 per-row amount is a Sandbox/demo rate. The updated [public video](https://youtu.be/wmR4mFCoq2c) shows current source assessment and separately labels the historical v1 partial-refund test. New HTTP jobs use v2 source assessment; persisted v1 jobs retain their original quotes and policy.
 
 The latest job capability is held in session storage. Reloading the same tab restores it. There are no user accounts, cross-device recovery or production authentication. Do not upload confidential customer data to this public pilot.
 

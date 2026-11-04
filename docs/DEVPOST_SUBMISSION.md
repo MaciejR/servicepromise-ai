@@ -1,6 +1,6 @@
 # Devpost submission draft
 
-Status: draft updated for v2 source assessment. Public video https://youtu.be/Dm09A60KTe4 records the verified v1 Sandbox refund scenario. Current v2 excludes source deficiencies before quoting.
+Status: draft updated for v2. Public video https://youtu.be/wmR4mFCoq2c demonstrates current source assessment, reports the verified current USD 2 Sandbox check, and separately labels the historical v1 refund test.
 
 ## Project name
 
@@ -20,7 +20,7 @@ Our pilot prepares simple textile catalogue entries from supplier text. It is a 
 
 Upload a small CSV, inspect the free deterministic source assessment and download its report, review eligible rows and a fixed test quote, then choose a demo or operator-protected PayPal Sandbox checkout. Real Azure OpenAI can extract color and material with literal source evidence. A deterministic validator checks the limited contract and gives an unsuccessful item one repair attempt. Accepted products are exported as drafts; undelivered products are eligible for their entire individual service fee.
 
-The recorded Azure scenario captured USD 3 in PayPal Sandbox. Azure OpenAI processed three products, two were delivered, and one was marked undelivered after two attempts. The operator issued a USD 1 partial refund and PayPal confirmed it. Refreshing restored the results and payment status. The demo uses Sandbox funds.
+The earlier v1 Azure scenario captured USD 3 in PayPal Sandbox. Azure OpenAI processed three products, two were delivered, and one was marked undelivered after two attempts. The operator issued a USD 1 partial refund and PayPal confirmed it. Refreshing restored the results and payment status. The demo uses Sandbox funds.
 
 ## How we built it
 
@@ -45,7 +45,7 @@ Follow the repository README to run the frontend and backend locally. In the bac
 1. Open the app in a fresh browser session. Use the included example, choose Azure OpenAI and PayPal Sandbox, and enter the operator token.
 2. Check source suitability. The current example excludes the invalid price and missing material, leaving two eligible rows. Create the USD 2 test quote and Sandbox checkout, approve with a Sandbox buyer, return to the app and capture.
 3. Inspect both delivered rows and the source quotations. Download the draft CSV and evidence report. The missing-material row appears in the assessment report before payment.
-4. Refresh to verify recovery of the accepted quote and results. The public video and verification record show the earlier v1 USD 3 capture and USD 1 refund; this is a historical integration demonstration. The current example has no refund when both quoted rows are delivered.
+4. Refresh to verify recovery of the accepted quote and results. The public video separately identifies the earlier v1 USD 3 capture and USD 1 refund. The current v2 Sandbox USD 2 capture and delivery also passed on 4 November. The current example has no refund when both quoted rows are delivered.
 
 The public Azure walkthrough runs in simulation mode without an account. The full flow requires the operator token on Azure or your own Sandbox and Azure OpenAI configuration locally. The deployed flow was verified on 3 November 2026.
 
@@ -60,7 +60,7 @@ Evaluate original supplier files with a human operator, measure total preparatio
 - Hosted build: https://api-servicepromise-mr-2026.azurewebsites.net/
 - Public source and MIT license: https://github.com/MaciejR/servicepromise-ai
 - Sandbox verification: https://github.com/MaciejR/servicepromise-ai/blob/main/docs/SANDBOX_VERIFICATION.md
-- Demo video: Final English walkthrough (2:36). https://youtu.be/Dm09A60KTe4
+- Demo video: Updated English walkthrough (1:48). https://youtu.be/wmR4mFCoq2c
 
 ## Tools
 
