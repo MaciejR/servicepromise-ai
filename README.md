@@ -77,7 +77,7 @@ cd ../frontend
 npm run build
 ```
 
-Current local suite: **60 tests passed**, including capability isolation, proportional and full simulated refunds, recovery after interrupted processing, concurrent worker requests, migration backup, source evidence, API downloads and operator gating. TypeScript and Vite production build pass. The catalogue UI has been exercised in Chrome with the example data.
+Current local suite: **62 tests passed**, including capability isolation, proportional and full simulated refunds, recovery after interrupted processing, concurrent worker requests, migration backup, source evidence, API downloads and operator gating. TypeScript and Vite production build pass. The catalogue UI has been exercised in Chrome with the example data.
 
 Remaining external checks: original supplier files reviewed by a human, measured end-user time savings, actual store import, public video link and hackathon submission. A real Sandbox capture/refund flow passed locally and in Azure; see the [verification record](docs/SANDBOX_VERIFICATION.md). Do not present mocked tests or simulated settlements as completed payment integration.
 
@@ -100,3 +100,5 @@ MIT. See [LICENSE](LICENSE).
 Only `api-m.sandbox.paypal.com` is used. Delivery starts after PayPal confirms the exact USD capture. Create/capture/refund operations use stable per-job IDs and persist their intent before a network call. A capture retry first checks the PayPal order. Pending refunds remain pending until confirmed by a status read. Uncertain operations older than one hour require manual reconciliation rather than issuing a new transaction. A single process serializes financial operations; multi-instance deployment is unsupported. These controls do not make this a production payment platform.
 
 Verified Sandbox scenario: **USD 2 captured → real Azure OpenAI extraction → one delivered item / one undelivered item → USD 1 refund confirmed → retry returns the same refund ID**. This passed on the deployed Azure backend; no real funds were used.
+
+Source-assessment release verified on Azure on 4 November 2026. The example excludes two rows, quotes USD 2, and delivers both included rows in Demo mode. A zero-eligible file returns a report and cannot create a quote. Direct creation repeats the assessment server-side. Both protected exports and job capability isolation passed. The new release was not retested with a fresh PayPal Sandbox capture; the payment integration verification record covers v1.
