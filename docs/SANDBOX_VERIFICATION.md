@@ -15,3 +15,7 @@ A subsequent Azure App Service restart preserved the completed catalogue results
 ## Release verification — 3 November 2026
 
 Azure deployment `af1b5bd0-0ed7-48a9-94ac-ff3a030a814c` ran a fresh guest checkout against PayPal Sandbox. The app captured USD 3, processed three included rows through Azure OpenAI, delivered two and left one undelivered. The invalid-price row was excluded before checkout. Both protected exports returned successfully with job access, and the job endpoint returned 404 without it. PayPal confirmed a USD 1 partial refund. Retrying returned the original refund ID. The release passed 60 backend tests and the frontend build in GitHub Actions.
+
+## Current v2 verification — 4 November 2026
+
+A fresh PayPal Sandbox guest checkout passed against the deployed source-assessment release. Source checks excluded the missing-material row and invalid-price row before checkout. PayPal captured USD 2. Real Azure OpenAI delivered both included rows. Refund eligibility was zero. Protected CSV and report downloads succeeded, and unauthenticated job access returned 404. This run used test funds and fictional buyer details. The earlier v1 partial-refund verification remains a separate historical run.
